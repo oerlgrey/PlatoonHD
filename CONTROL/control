@@ -1,0 +1,9 @@
+Package: enigma2-plugin-skins-platoonhd
+Version: 0.3
+Section: misc
+Priority: optional
+Architecture: all
+Depends: enigma2-plugin-extensions-openwebif
+Maintainer: örlgrey
+Description: Skin for Enigma2
+Source:

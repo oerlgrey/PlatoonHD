@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ `wget -O - -q http://127.0.0.1/web/deviceinfo | grep "\(<\|</\)e2distroversion" | tr -d '\n' | sed "s/.*<e2distroversion>\(.*\)<\/e2distroversion>.*/\\1\n/"` = 'teamblue' ]; then
+	echo "Image found: teamBlue ............... OK"
+else
+	echo "no supportet Image found ........ failed"
+    cp /usr/share/enigma2/PlatoonHD/empty.xml /usr/share/enigma2/PlatoonHD/skin.xml
+fi
