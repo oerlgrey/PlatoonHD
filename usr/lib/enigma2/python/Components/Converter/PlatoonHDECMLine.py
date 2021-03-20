@@ -84,10 +84,10 @@ class PlatoonHDECMLine(Poll, Converter, object):
 			except:
 				
 				if CI:
-					ecmline = _('CI Modul')
+					ecmline = _("CI Modul")
 
 				else:
-					ecmline = _('waiting for information ...')
+					ecmline = ''
 	
 			else:
 				camInfo = {}
@@ -120,7 +120,7 @@ class PlatoonHDECMLine(Poll, Converter, object):
 				elif ((caid>='0100') and (caid<='01FF')):
 					system = 'System: SECA'
 				else:
-					system = _('System: unknown')
+					system = _("System: unknown")
 
 				caid = 'CAID: ' + str(caid)
 
@@ -227,14 +227,14 @@ class PlatoonHDECMLine(Poll, Converter, object):
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + source + ' - ' + prov + ' - ' + ecmtime
 
 				else:
-					active = _('unknown')
-					ecmline = _('no information available')
+					active = _("unknown")
+					ecmline = _("no information available")
 
 		else:
 			if self.invisible == self.FTAINVISIBLE:
 				ecmline = ''
 			else:
-				ecmline = _('free to air')
+				ecmline = _("free to air")
 
 		return ecmline
 

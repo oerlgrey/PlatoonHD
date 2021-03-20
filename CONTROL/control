@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-platoonhd
-Version: 0.3
+Version: 1.0
 Section: misc
 Priority: optional
 Architecture: all
-Depends: enigma2-plugin-extensions-openwebif
+Depends: python-imaging, python-requests, python-lxml
 Maintainer: örlgrey
 Description: Skin for Enigma2
 Source:
