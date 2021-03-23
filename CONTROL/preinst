@@ -1,4 +1,2 @@
 #!/bin/sh
-echo "                                                           "
-echo "       The Skin PlatoonHD is now being installed...       "
-echo "                                                           "
+echo "The Skin PlatoonHD is now being installed..."

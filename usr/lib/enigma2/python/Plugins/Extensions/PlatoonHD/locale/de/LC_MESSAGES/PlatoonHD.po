@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PlatoonHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 20:24+0200\n"
-"PO-Revision-Date: 2021-03-20 09:06+0100\n"
+"PO-Revision-Date: 2021-03-23 20:26+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: örlgrey\n"
 "Language: de\n"
@@ -159,14 +159,6 @@ msgid "high"
 msgstr "hoch"
 
 #: PlatoonHD.py
-msgid "on"
-msgstr "ein"
-
-#: PlatoonHD.py
-msgid "off"
-msgstr "aus"
-
-#: PlatoonHD.py
 msgid "no transparency"
 msgstr "ohne Transparenz"
 
@@ -183,26 +175,28 @@ msgid "high transparency"
 msgstr "hohe Transparenz"
 
 #: PlatoonHD.py
-msgid "Weather"
+msgid "weather"
 msgstr "Wetter"
 
 #: PlatoonHD.py
-msgid "weather widget"
-msgstr "Wetter-Widget"
+msgid "Weather off"
+msgstr "Wetter aus"
 
 #: PlatoonHD.py
-msgid ""
-"Choose from different options\n"
-"to display the weather in the 'Infobar',\n"
-"or deactivate the weather widget."
-msgstr ""
-"Wählen Sie aus verschiedenen Optionen\n"
-"um das Wetter in der Infobar anzuzeigen,\n"
-"oder deaktivieren Sie das Wetter-Widget."
+msgid "Infobar"
+msgstr "Infoleiste"
 
 #: PlatoonHD.py
-msgid "Activate or deactivate the weather widget."
-msgstr "Aktivieren oder deaktivieren Sie das Wetter-Widget."
+msgid "Menu"
+msgstr "Menü"
+
+#: PlatoonHD.py
+msgid "Infobar & Menu"
+msgstr "Infoleiste & Menü"
+
+#: PlatoonHD.py
+msgid "Choose from different options to display the weather informations, or deactivate the weather infos."
+msgstr "Wählen Sie aus verschiedenen Optionen um die Wetter-Informationen anzuzeigen, oder deaktivieren Sie die Wetter-Anzeige."
 
 #: PlatoonHD.py
 msgid ""
@@ -223,14 +217,6 @@ msgstr ""
 #: PlatoonHD.py
 msgid "Enter your location:"
 msgstr "Geben Sie Ihren Standort ein:"
-
-#: PlatoonHD.py
-msgid "weather off"
-msgstr "Wetter aus"
-
-#: PlatoonHD.py
-msgid "weather on"
-msgstr "Wetter ein"
 
 #: PlatoonHD.py
 msgid "Do you really want to reboot now?"
@@ -254,11 +240,11 @@ msgstr ""
 
 #: PlatoonHD.py
 msgid ""
-"Your box needs an internet connection to display the weather widget.\n"
+"Your box needs an internet connection to display the weather information.\n"
 "Please solve the problem."
 msgstr ""
-"Ihre Box benötigt eine Internetverbindung, um das Wetter-Widget anzuzeigen.\n"
-"Bitte lösen Sie das Problem."
+"Ihre Box benötigt eine Internetverbindung, um die Wetter-Informationen anzuzeigen.\n"
+"Bitte beheben Sie das Problem."
 
 #: PlatoonHD.py
 msgid "Enter location manually"
@@ -307,3 +293,51 @@ msgstr "    Standort"
 #: PlatoonHD.py
 msgid "Check location"
 msgstr "Überprüfe Standort"
+
+#: PlatoonHDTextTranslator.py
+msgid "it follows:"
+msgstr "es folgt:"
+
+#: PlatoonHDTextTranslator.py
+msgid "coming:"
+msgstr "gleich:"
+
+#: PlatoonHDTextTranslator.py
+msgid "runs until"
+msgstr "läuft bis "
+
+#: PlatoonHDTextTranslator.py
+msgid "timeshift active"
+msgstr "timeshift aktiv"
+
+#: PlatoonHDTextTranslator.py
+msgid "until live:"
+msgstr "bis live:"
+
+#: PlatoonHDTextTranslator.py
+msgid "Birthday"
+msgstr "Geburtstag"
+
+#: PlatoonHDTextTranslator.py
+msgid "Age"
+msgstr "Alter"
+
+#: PlatoonHDTextTranslator.py
+msgid "Birthday Reminder Settings"
+msgstr "Birthday Reminder Einstellungen"
+
+#: PlatoonHDTextTranslator.py
+msgid "Select a path for the birthday file"
+msgstr "Wähle den Pfad für die Geburtstagsdatei"
+
+#: PlatoonHDTextTranslator.py
+msgid "Channellist"
+msgstr "Kanalliste"
+
+#: PlatoonHDTextTranslator.py
+msgid "Movielist"
+msgstr "Filmliste"
+
+#: PlatoonHDTextTranslator.py
+msgid "Second Infobar"
+msgstr "Zweite Infoleiste"

@@ -1,4 +1,2 @@
 #!/bin/sh
-echo "                                                           "
-echo "       PlatoonHD Skin successful removed.                 "
-echo "                                                           "
+echo "PlatoonHD Skin successful removed."

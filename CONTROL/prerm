@@ -59,6 +59,9 @@ fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyo
 fi
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDTextTranslator.pyo ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDTextTranslator.pyo
+fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDWetterPicon.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDWetterPicon.pyo
 fi

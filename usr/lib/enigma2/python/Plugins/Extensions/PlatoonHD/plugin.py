@@ -44,10 +44,19 @@ def main(session, **kwargs):
 		traceback.print_exc()
 
 def Plugins(**kwargs):
-	if config.skin.primary_skin.value == "PlatoonHD/skin.xml":
-		list = []
-		list.append(PluginDescriptor(name="MyPlatoonHD", description=_("MyPlatoonHD-Settings"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main))
-		return list
-	else:
+	try:
+		from boxbranding import getImageDistro
+		if getImageDistro() == "teamblue":
+			if config.skin.primary_skin.value == "PlatoonHD/skin.xml":
+				list = []
+				list.append(PluginDescriptor(name="MyPlatoonHD", description=_("MyPlatoonHD-Settings"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main))
+				return list
+			else:
+				list = []
+				return list
+		else:
+			list = []
+			return list
+	except ImportError:
 		list = []
 		return list

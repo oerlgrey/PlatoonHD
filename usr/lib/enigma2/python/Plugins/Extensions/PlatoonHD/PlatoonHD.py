@@ -162,9 +162,11 @@ config.plugins.PlatoonHD.Progress = ConfigSelection(default="FF4B05", choices = 
 				("202074", _("blue"))
 				])
 
-config.plugins.PlatoonHD.WeatherWidget = ConfigSelection(default = "none", choices = [
-				("none", _("off")),
-				("weather-on", _("on"))
+config.plugins.PlatoonHD.WeatherWidget = ConfigSelection(default = "weather-off", choices = [
+				("weather-off", _("off")),
+				("infobar", _("Infobar")),
+				("menu", _("Menu")),
+				("infobar-menu", _("Infobar & Menu"))
 				])
 
 config.plugins.PlatoonHD.msn_searchby = ConfigSelection(default = "auto-ip", choices = [
@@ -249,7 +251,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self["helperimage"] = Pixmap()
 		self["Canvas"] = CanvasSource()
 		self["description"] = StaticText()
-		self["version"] = StaticText("Version 1.0")
+		self["version"] = StaticText("Version 1.2")
 
 		list = []
 		ConfigListScreen.__init__(self, list)
@@ -296,8 +298,8 @@ class PlatoonHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("    selection color"), config.plugins.PlatoonHD.SelectionColor1, _("Choose the background color of selection bars.")))
 		list.append(getConfigListEntry(_("    selection font color"), config.plugins.PlatoonHD.SelectionFont, _("Choose the color of the font in selection bars.")))
 		list.append(getConfigListEntry(_("    progress bar color"), config.plugins.PlatoonHD.Progress, _("Choose the color of progress bars.")))
-		list.append(getConfigListEntry(_("weather widget"), config.plugins.PlatoonHD.WeatherWidget, _("Activate or deactivate the weather widget.")))
-		if config.plugins.PlatoonHD.WeatherWidget.value == "weather-on":
+		list.append(getConfigListEntry(_("weather"), config.plugins.PlatoonHD.WeatherWidget, _("Choose from different options to display the weather informations, or deactivate the weather infos.")))
+		if config.plugins.PlatoonHD.WeatherWidget.value in ("infobar", "menu", "infobar-menu"):
 			list.append(getConfigListEntry(_("    Language"), config.plugins.PlatoonHD.msn_language, _("Specify the language for the weather output.")))
 			list.append(getConfigListEntry(_("    Search option"), config.plugins.PlatoonHD.msn_searchby, _("Choose from different options to enter your settings.\nThen press the yellow button to search for the weather code.")))
 			if config.plugins.PlatoonHD.msn_searchby.value == "location":
@@ -347,6 +349,15 @@ class PlatoonHD(ConfigListScreen, Screen):
 				self.showText(30,_("low transparency"))
 			elif option.value == "3F":
 				self.showText(30,_("high transparency"))
+		elif option == config.plugins.PlatoonHD.WeatherWidget:
+			if option.value == "weather-off":
+				self.showText(30,_("Weather off"))
+			elif option.value == "infobar":
+				self.showText(30,_("Infobar"))
+			elif option.value == "menu":
+				self.showText(30,_("Menu"))
+			elif option.value == "infobar-menu":
+				self.showText(30,_("Infobar & Menu"))
 		elif option in (config.plugins.PlatoonHD.msn_searchby, config.plugins.PlatoonHD.msn_code, config.plugins.PlatoonHD.msn_cityname):
 			self.showText(30, config.plugins.PlatoonHD.msn_cityfound.value + "\n" + config.plugins.PlatoonHD.msn_code.value)
 		elif option == config.plugins.PlatoonHD.msn_language:
@@ -370,12 +381,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 		try:
 			optionValue = self["config"].getCurrent()[1]
 			returnValue = self["config"].getCurrent()[1].value
-			if optionValue == config.plugins.PlatoonHD.WeatherWidget:
-				if returnValue == "none":
-					path = "/usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/images/infobar.jpg"
-				else:
-					path = "/usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/images/weather-on.jpg"
-			elif fileExists("/usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/images/" + returnValue + ".jpg"):
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/images/" + returnValue + ".jpg"):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/images/" + returnValue + ".jpg"
 			if fileExists(path):
 				return path
@@ -424,7 +430,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 			self.session.open(MessageBox, _("No valid location found."), MessageBox.TYPE_INFO, timeout = 10)
 
 	def checkCode(self):
-		if self.InternetAvailable and config.plugins.PlatoonHD.WeatherWidget.value == "weather-on":
+		if self.InternetAvailable and config.plugins.PlatoonHD.WeatherWidget.value in ("infobar", "menu", "infobar-menu"):
 			option = self["config"].getCurrent()[1]
 			if option.value == "auto-ip":
 				cityip = self.getCityByIP()
@@ -557,22 +563,32 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self.makeSelectionpng()
 
 		# weather
-		if config.plugins.PlatoonHD.WeatherWidget.value == "weather-on":
+		if config.plugins.PlatoonHD.WeatherWidget.value in ("infobar", "menu", "infobar-menu"):
 			if self.InternetAvailable:
+				if config.plugins.PlatoonHD.WeatherWidget.value == "infobar":
+					self.skinSearchAndReplace.append(['<!-- infobar weather -->', '<panel name="infobar-weather"/>'])
+					self.skinSearchAndReplace.append(['name="TimeshiftState" position="217,80"', 'name="TimeshiftState" position="217,126"'])
+					self.skinSearchAndReplace.append(['name="TunerState" position="10,196"', 'name="TunerState" position="10,242"'])
+					self.skinSearchAndReplace.append(['name="TunerState_v2" position="10,196"', 'name="TunerState_v2" position="10,242"'])
+					self.skinSearchAndReplace.append(['name="ResolutionLabel" position="10,102"', 'name="ResolutionLabel" position="10,148"'])
+				elif config.plugins.PlatoonHD.WeatherWidget.value == "infobar-menu":
+					self.skinSearchAndReplace.append(['<!-- infobar weather -->', '<panel name="infobar-weather"/>'])
+					self.skinSearchAndReplace.append(['name="TimeshiftState" position="217,80"', 'name="TimeshiftState" position="217,126"'])
+					self.skinSearchAndReplace.append(['name="TunerState" position="10,196"', 'name="TunerState" position="10,242"'])
+					self.skinSearchAndReplace.append(['name="TunerState_v2" position="10,196"', 'name="TunerState_v2" position="10,242"'])
+					self.skinSearchAndReplace.append(['name="ResolutionLabel" position="10,102"', 'name="ResolutionLabel" position="10,148"'])
+					self.skinSearchAndReplace.append(['<panel name="menu_clock"/>', '<panel name="menu_weather"/>'])
+				elif config.plugins.PlatoonHD.WeatherWidget.value == "menu":
+					self.skinSearchAndReplace.append(['<panel name="menu_clock"/>', '<panel name="menu_weather"/>'])
 				config.plugins.PlatoonHD.refreshInterval.value = "120"
 				config.plugins.PlatoonHD.refreshInterval.save()
-				self.skinSearchAndReplace.append(['<!-- infobar weather -->', '<panel name="infobar-weather"/>'])
-				self.skinSearchAndReplace.append(['name="TimeshiftState" position="217,80"', 'name="TimeshiftState" position="217,126"'])
-				self.skinSearchAndReplace.append(['name="TunerState" position="10,196"', 'name="TunerState" position="10,242"'])
-				self.skinSearchAndReplace.append(['name="TunerState_v2" position="10,196"', 'name="TunerState_v2" position="10,242"'])
-				self.skinSearchAndReplace.append(['name="ResolutionLabel" position="10,102"', 'name="ResolutionLabel" position="10,148"'])
 				self.appendSkinFile(self.xmlfile)
 				self.generateSkin()
 			else:
 				config.plugins.PlatoonHD.refreshInterval.value = "0"
 				config.plugins.PlatoonHD.refreshInterval.save()
-				self.session.open(MessageBox, _("Your box needs an internet connection to display the weather widget.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout = 10)
-				config.plugins.PlatoonHD.WeatherWidget.value = "none"
+				self.session.open(MessageBox, _("Your box needs an internet connection to display the weather information.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout = 10)
+				config.plugins.PlatoonHD.WeatherWidget.value = "weather-off"
 				self.mylist()
 		else:
 			config.plugins.PlatoonHD.refreshInterval.value = "0"
