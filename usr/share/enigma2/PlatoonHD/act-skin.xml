@@ -2678,11 +2678,12 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget position="217,628" render="Progress" size="801,5" source="session.CurrentService" foregroundColor="PlatoonProgress" zPosition="3" transparent="1">
 	  <convert type="ServicePosition">Position</convert>
 	</widget>
-    <eLabel backgroundColor="PlatoonBKbg" text="läuft bis " font="Regular;20" foregroundColor="PlatoonBKfg1" position="802,644" size="120,24" halign="right" transparent="1" />
-	<widget source="session.CurrentService" render="Label" position="923,644" size="55,24" font="Regular;20" halign="right" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" text="13:45" foregroundColor="PlatoonBKfg1">
+    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;20" foregroundColor="PlatoonBKfg1" position="842,644" size="120,24" halign="right" transparent="1">
+      <convert type="PlatoonHDTextTranslator">runsuntil</convert>
+    </widget>
+	<widget source="session.CurrentService" render="Label" position="963,644" size="55,24" font="Regular;20" halign="right" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" text="13:45" foregroundColor="PlatoonBKfg1">
 	  <convert type="PlatoonHDServiceEndTime">EndTime</convert>
 	</widget>
-    <eLabel backgroundColor="PlatoonBKbg" text="Uhr" font="Regular;20" foregroundColor="PlatoonBKfg1" position="978,644" size="40,24" halign="right" zPosition="1" transparent="1" />
     <widget source="session.CurrentService" render="Picon" alphatest="blend" position="42,582" size="160,96" transparent="1" zPosition="1">
       <convert type="PlatoonHDMovieReference" />
     </widget>
@@ -2747,11 +2748,12 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget position="217,628" render="Progress" size="801,5" source="session.CurrentService" foregroundColor="PlatoonProgress" zPosition="3" transparent="1">
 	  <convert type="ServicePosition">Position</convert>
 	</widget>
-    <eLabel backgroundColor="PlatoonBKbg" text="läuft bis " font="Regular;20" foregroundColor="PlatoonBKfg1" position="802,644" size="120,24" halign="right" transparent="1" />
-	<widget source="session.CurrentService" render="Label" position="923,644" size="55,24" font="Regular;20" halign="right" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" text="13:45" foregroundColor="PlatoonBKfg1">
+    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;20" foregroundColor="PlatoonBKfg1" position="842,644" size="120,24" halign="right" transparent="1">
+      <convert type="PlatoonHDTextTranslator">runsuntil</convert>
+    </widget>
+	<widget source="session.CurrentService" render="Label" position="963,644" size="55,24" font="Regular;20" halign="right" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" text="13:45" foregroundColor="PlatoonBKfg1">
 	  <convert type="PlatoonHDServiceEndTime">EndTime</convert>
 	</widget>
-    <eLabel backgroundColor="PlatoonBKbg" text="Uhr" font="Regular;20" foregroundColor="PlatoonBKfg1" position="978,644" size="40,24" halign="right" zPosition="1" transparent="1" />
     <widget source="session.CurrentService" render="Picon" alphatest="blend" position="42,582" size="160,96" transparent="1" zPosition="1">
       <convert type="PlatoonHDMovieReference" />
     </widget>
@@ -3995,10 +3997,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget source="session.CurrentService" render="Label" position="648,32" size="100,30" font="Regular;24" halign="right" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="PlatoonBKfg1" position="561,32" size="100,30" halign="left" valign="top" zPosition="15" transparent="1">
+    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="PlatoonBKfg1" position="561,32" size="100,30" valign="top" zPosition="15" transparent="1">
       <convert type="PlatoonHDTextTranslator">untillive</convert>
     </widget>
-    <eLabel backgroundColor="PlatoonBKbg" text="bis live:" font="Regular;24" foregroundColor="PlatoonBKfg1" position="561,32" size="100,30" halign="left" valign="top" zPosition="15" transparent="1" />
     <eLabel text="min " position="755,32" size="50,30" font="Regular;24" foregroundColor="PlatoonBKfg1" halign="left" backgroundColor="PlatoonBKbg" transparent="1" zPosition="15" valign="top" />
     <widget source="session.CurrentService" render="Label" position="147,32" size="100,30" font="Regular; 24" halign="right" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Length</convert>
