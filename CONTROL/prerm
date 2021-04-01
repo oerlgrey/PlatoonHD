@@ -35,6 +35,9 @@ fi
 if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyo
 fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDTextTranslator.pyo ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDTextTranslator.pyo
+fi
 if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDWeather.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDWeather.pyo
 fi
@@ -59,8 +62,8 @@ fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyo
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDTextTranslator.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDTextTranslator.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyo ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyo
 fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDWetterPicon.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDWetterPicon.pyo

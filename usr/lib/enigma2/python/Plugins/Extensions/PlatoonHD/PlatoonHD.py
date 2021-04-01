@@ -280,6 +280,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self.timer.callback.append(self.updateMylist)
 		self.onLayoutFinish.append(self.updateMylist)
 
+		self.E2DistroVersion = self.getE2DistroVersion()
 		self.InternetAvailable = self.getInternetAvailable()
 
 	def mylist(self):
@@ -413,12 +414,18 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self.mylist()
 
 	def keyDown(self):
-		self["config"].instance.moveSelection(self["config"].instance.moveDown)
-		self.mylist()
+		if self.E2DistroVersion == "teamblue":
+			pass
+		elif self.E2DistroVersion == "openhdf":
+			self["config"].instance.moveSelection(self["config"].instance.moveDown)
+			self.mylist()
 
 	def keyUp(self):
-		self["config"].instance.moveSelection(self["config"].instance.moveUp)
-		self.mylist()
+		if self.E2DistroVersion == "teamblue":
+			pass
+		elif self.E2DistroVersion == "openhdf":
+			self["config"].instance.moveSelection(self["config"].instance.moveUp)
+			self.mylist()
 
 	def getCityByIP(self):
 		try:
@@ -441,7 +448,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 
 					for weather in data_gc.findall("./weather"):
 						ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						weathercode = weather.get('weatherlocationcode').split('wc:')[1]
+						weathercode = weather.get('weatherlocationcode')
 						iplist.append((ipcity, weathercode + "//" + ipcity))
 
 					def WeatherCodeCallBack(callback):
@@ -466,7 +473,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 
 					for weather in data_gc.findall("./weather"):
 						city = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						code = weather.get('weatherlocationcode').split('wc:')[1]
+						code = weather.get('weatherlocationcode')
 						citylist.append((city, code + "//" + city))
 
 					def LocationCallBack(callback):
@@ -651,6 +658,16 @@ class PlatoonHD(ConfigListScreen, Screen):
 		else:
 			self.mylist()
 
+	def getE2DistroVersion(self):
+		try:
+			from boxbranding import getImageDistro
+			if getImageDistro() == "teamblue":
+				return "teamblue"
+			elif getImageDistro() == "openhdf":
+				return "openhdf"
+		except ImportError:
+			return "teamblue"
+
 	def getInternetAvailable(self):
 		import ping
 		r = ping.doOne("8.8.8.8", 1.5)
@@ -715,6 +732,10 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self.changeColor("virtualkeyboard_background", config.plugins.PlatoonHD.MenuColor.value)
 		self.changeColor("volume_background", config.plugins.PlatoonHD.MenuColor.value)
 		self.changeColor("webradio_background", config.plugins.PlatoonHD.MenuColor.value)
+		if self.E2DistroVersion == "openhdf":
+			self.changeColor("infobarepg_background", config.plugins.PlatoonHD.MenuColor.value)
+			self.changeColor("infobareventview_background", config.plugins.PlatoonHD.MenuColor.value)
+			self.changeColor("virtualkeyboard_background2", config.plugins.PlatoonHD.MenuColor.value)
 
 	def copyMenuFiles(self):
 		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_b.png", self.graphics + "bs_b.png")
@@ -737,6 +758,10 @@ class PlatoonHD(ConfigListScreen, Screen):
 		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/virtualkeyboard_background.png", self.graphics + "virtualkeyboard_background.png")
 		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/volume_background.png", self.graphics + "volume_background.png")
 		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/webradio_background.png", self.graphics + "webradio_background.png")
+		if self.E2DistroVersion == "openhdf":
+			copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/infobarepg_background.png", self.graphics + "infobarepg_background.png")
+			copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/infobareventview_background.png", self.graphics + "infobareventview_background.png")
+			copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/virtualkeyboard_background2.png", self.graphics + "virtualkeyboard_background2.png")
 
 	def changeColor(self, name, color):
 		color = color[-6:]

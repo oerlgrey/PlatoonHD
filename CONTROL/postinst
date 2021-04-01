@@ -1,15 +1,21 @@
 #!/bin/sh
 if [ `wget -O - -q http://127.0.0.1/web/deviceinfo | grep "\(<\|</\)e2distroversion" | tr -d '\n' | sed "s/.*<e2distroversion>\(.*\)<\/e2distroversion>.*/\\1\n/"` = 'teamblue' ]; then
-	echo "The Skin PlatoonHD has been activated successfully."
+    cp /usr/share/enigma2/PlatoonHD/teamblue.xml /usr/share/enigma2/PlatoonHD/skin.xml
+    cp /usr/share/enigma2/PlatoonHD/teamblue.xml /usr/share/enigma2/PlatoonHD/act-skin.xml
+    tar xf /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/data/vkey-teamblue.tar.gz -C /usr/share/enigma2/PlatoonHD/buttons/
+    echo "The Skin PlatoonHD has been activated successfully."
+elif [ `wget -O - -q http://127.0.0.1/web/deviceinfo | grep "\(<\|</\)e2distroversion" | tr -d '\n' | sed "s/.*<e2distroversion>\(.*\)<\/e2distroversion>.*/\\1\n/"` = 'openhdf' ]; then
+    cp /usr/share/enigma2/PlatoonHD/openhdf.xml /usr/share/enigma2/PlatoonHD/skin.xml
+    cp /usr/share/enigma2/PlatoonHD/openhdf.xml /usr/share/enigma2/PlatoonHD/act-skin.xml
+    cp /usr/share/enigma2/PlatoonHD/logo_openhdf.png /usr/share/enigma2/PlatoonHD/logo.png
+    tar xf /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/data/vkey-openhdf.tar.gz -C /usr/share/enigma2/PlatoonHD/buttons/
+    echo "The Skin PlatoonHD has been activated successfully."
 else
-	echo "No supported Image found."
-	echo "The Skin PlatoonHD is specified for 'teamBlue' Image."
-    wget -q -O /dev/null "http://127.0.0.1/web/message?type=1&text=No%20supported%20Image%20found.%0AThe%20Skin%20PlatoonHD%20is%20specified%20for%20'teamBlue'%20Image.&timeout=13" || true
+    echo "No supported Image found."
+    wget -q -O /dev/null "http://127.0.0.1/web/message?type=1&text=No%20supported%20Image%20found.%0AThe%20Skin%20PlatoonHD%20is%20specified%20for%20'teamBlue'%20'and'%20'openHDF'%20Image.&timeout=13" || true
 fi
 if [ -f /tmp/platoonhd-skin.xml ]; then
     mv -f /tmp/platoonhd-skin.xml /usr/share/enigma2/PlatoonHD/skin.xml
-else
-    cp /usr/share/enigma2/PlatoonHD/act-skin.xml /usr/share/enigma2/PlatoonHD/skin.xml
 fi
 if [ -d /tmp/platoonhd-graphics ]; then
     mv -f /tmp/platoonhd-graphics/* /usr/share/enigma2/PlatoonHD/graphics/

@@ -46,7 +46,7 @@ def main(session, **kwargs):
 def Plugins(**kwargs):
 	try:
 		from boxbranding import getImageDistro
-		if getImageDistro() == "teamblue":
+		if getImageDistro() in ("teamblue", "openhdf"):
 			if config.skin.primary_skin.value == "PlatoonHD/skin.xml":
 				list = []
 				list.append(PluginDescriptor(name="MyPlatoonHD", description=_("MyPlatoonHD-Settings"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main))
