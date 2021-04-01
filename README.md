@@ -1,4 +1,4 @@
-# "PlatoonHD" - Skin for teamBlue-Image
+# "PlatoonHD" - Skin for teamBlue & openHDF Image
 
 ## InfoBar
 ![InfoBar](https://user-images.githubusercontent.com/10674715/111898520-de6ce180-8a26-11eb-8dfd-a96f38b0008f.jpg)
