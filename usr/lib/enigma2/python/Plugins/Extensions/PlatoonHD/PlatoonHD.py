@@ -414,18 +414,12 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self.mylist()
 
 	def keyDown(self):
-		if self.E2DistroVersion == "teamblue":
-			pass
-		elif self.E2DistroVersion == "openhdf":
-			self["config"].instance.moveSelection(self["config"].instance.moveDown)
-			self.mylist()
+		self["config"].instance.moveSelection(self["config"].instance.moveDown)
+		self.mylist()
 
 	def keyUp(self):
-		if self.E2DistroVersion == "teamblue":
-			pass
-		elif self.E2DistroVersion == "openhdf":
-			self["config"].instance.moveSelection(self["config"].instance.moveUp)
-			self.mylist()
+		self["config"].instance.moveSelection(self["config"].instance.moveUp)
+		self.mylist()
 
 	def getCityByIP(self):
 		try:
