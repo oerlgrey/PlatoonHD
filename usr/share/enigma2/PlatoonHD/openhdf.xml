@@ -6926,21 +6926,21 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BirthdayReminder" position="0,0" size="1280,720" title=" " >
 	<!--*BirthdayReminder*-->
 	<eLabel backgroundColor="PlatoonGYbg" text="Birthday Reminder" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="58,80" size="300,27" valign="center" transparent="1">
+    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="58,80" size="414,27" valign="center" transparent="1">
       <convert type="PlatoonHDTextTranslator">name</convert>
     </widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="392,80" size="250,27" valign="center" transparent="1">
+    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="492,80" size="184,27" valign="center" transparent="1">
       <convert type="PlatoonHDTextTranslator">birthday</convert>
     </widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="666,80" size="96,27" halign="right" valign="center" transparent="1">
+    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="682,80" size="90,27" halign="right" valign="center" transparent="1">
       <convert type="PlatoonHDTextTranslator">age</convert>
     </widget>
 	<widget backgroundColor="PlatoonBKbg" source="list" render="Listbox" position="42,110" size="736,510" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos = (16, 1),   size = (314, 27), font=0, flags = RT_HALIGN_LEFT, text = 0),
-					MultiContentEntryText(pos = (350, 1), size = (278, 27), font=0, flags = RT_HALIGN_LEFT, text = 1),
-					MultiContentEntryText(pos = (634, 1), size = (86, 27), font=0, flags = RT_HALIGN_RIGHT, text = 2),
+					MultiContentEntryText(pos = (16, 1),   size = (414, 27), font=0, flags = RT_HALIGN_LEFT, text = 0),
+					MultiContentEntryText(pos = (450, 1), size = (184, 27), font=0, flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryText(pos = (640, 1), size = (80, 27), font=0, flags = RT_HALIGN_RIGHT, text = 2),
 					],
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 30
