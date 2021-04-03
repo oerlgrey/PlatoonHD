@@ -333,7 +333,7 @@
 	  <widget source="session.CurrentService" position="862,337" transparent="1" zPosition="8" size="105,105" render="PlatoonHDWetterPicon" alphatest="blend" path="WetterIcons">
 		<convert  type="PlatoonHDWeather">icon_cur</convert>
 	  </widget>
-	  <widget source="session.CurrentService" render="Label" position="968,366" size="150,49" font="Regular2;38" foregroundColor="PlatoonBKfg2" backgroundColor="PlatoonBKbg" noWrap="1" halign="center" transparent="1" zPosition="3">
+	  <widget source="session.CurrentService" render="Label" position="968,366" size="150,49" font="Regular2;38" foregroundColor="PlatoonGYfg2" backgroundColor="PlatoonGYbg" noWrap="1" halign="center" transparent="1" zPosition="3">
 		<convert type="PlatoonHDWeather">temp_cur</convert>
 	  </widget>
 	  <widget noWrap="1" backgroundColor="PlatoonGYbg" font="Regular;26" foregroundColor="PlatoonGYfg1" render="Label" position="1118,351" size="100,33" source="session.CurrentService" zPosition="8" transparent="1">
