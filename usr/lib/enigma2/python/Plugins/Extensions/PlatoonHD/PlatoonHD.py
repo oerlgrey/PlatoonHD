@@ -251,7 +251,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self["helperimage"] = Pixmap()
 		self["Canvas"] = CanvasSource()
 		self["description"] = StaticText()
-		self["version"] = StaticText("Version 1.4")
+		self["version"] = StaticText("Version 1.4.1")
 
 		list = []
 		ConfigListScreen.__init__(self, list)
@@ -523,10 +523,10 @@ class PlatoonHD(ConfigListScreen, Screen):
 		# fonts
 		self.skinSearchAndReplace.append(['name="PlatoonBKfg1" value="#00FFFFFF', 'name="PlatoonBKfg1" value="#00' + config.plugins.PlatoonHD.WindowFont1.value])
 		self.skinSearchAndReplace.append(['name="foreground" value="#00FFFFFF', 'name="foreground" value="#00' + config.plugins.PlatoonHD.WindowFont1.value])
-		self.skinSearchAndReplace.append(['name="PlatoonBKfg2" value="#00FFC242', 'name="PlatoonBKfg2" value="#00' + config.plugins.PlatoonHD.WindowFont2.value])
+		self.skinSearchAndReplace.append(['name="PlatoonBKfg2" value="#00FFC000', 'name="PlatoonBKfg2" value="#00' + config.plugins.PlatoonHD.WindowFont2.value])
 		self.skinSearchAndReplace.append(['name="PlatoonGYfg1" value="#00FFFFFF', 'name="PlatoonGYfg1" value="#00' + config.plugins.PlatoonHD.MenuFont1.value])
 		self.skinSearchAndReplace.append(['name="PlatoonButtonfg" value="#00FFFFFF', 'name="PlatoonButtonfg" value="#00' + config.plugins.PlatoonHD.MenuFont1.value])
-		self.skinSearchAndReplace.append(['name="PlatoonGYfg2" value="#00FFC242', 'name="PlatoonGYfg2" value="#00' + config.plugins.PlatoonHD.MenuFont2.value])
+		self.skinSearchAndReplace.append(['name="PlatoonGYfg2" value="#00FFC000', 'name="PlatoonGYfg2" value="#00' + config.plugins.PlatoonHD.MenuFont2.value])
 		self.skinSearchAndReplace.append(['name="PlatoonSelfg" value="#00FFFFFF', 'name="PlatoonSelfg" value="#00' + config.plugins.PlatoonHD.SelectionFont.value])
 
 		# progress
