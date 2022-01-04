@@ -57,17 +57,17 @@ class PlatoonHDWeather(Poll, Converter, object):
 			return self.getWind()
 		elif self.type == "city":
 			return str(config.plugins.PlatoonHD.msn_cityfound.value)
-		elif self.type in ("icon_cur","icon1","icon2","icon3"):
+		elif self.type in ("icon_cur", "icon1", "icon2", "icon3"):
 			return self.getMeteoIcon()
-		elif self.type in ("text_cur","text1","text2","text3"):
+		elif self.type in ("text_cur", "text1", "text2", "text3"):
 			return self.getMeteoText()
-		elif self.type in ("high0","high1","high2","high3"):
+		elif self.type in ("high0", "high1", "high2", "high3"):
 			return self.getTemperature_high()
-		elif self.type in ("low0","low1","low2","low3"):
+		elif self.type in ("low0", "low1", "low2", "low3"):
 			return self.getTemperature_low()
-		elif self.type in ("minmax0","minmax1","minmax2","minmax3"):
+		elif self.type in ("minmax0", "minmax1", "minmax2", "minmax3"):
 			return self.getMinMax()
-		elif self.type in ("shortday0","shortday1","shortday2","shortday3"):
+		elif self.type in ("shortday0", "shortday1", "shortday2", "shortday3"):
 			return self.getShortday()
 		else:
 			return ""
@@ -84,7 +84,7 @@ class PlatoonHDWeather(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				r = ping.doOne("8.8.8.8",1.5)
+				r = ping.doOne("8.8.8.8", 1.5)
 				if r != None and r <= 1.5:
 					print ("PlatoonHDWeather: download from URL")
 					res = requests.get('http://weather.service.msn.com/data.aspx?src=windows&weadegreetype=C&culture=' + str(config.plugins.PlatoonHD.msn_language.value) + '&wealocations=' + str(config.plugins.PlatoonHD.msn_code.value), timeout=1.5)
@@ -103,7 +103,7 @@ class PlatoonHDWeather(Poll, Converter, object):
 			for childs in self.data:
 				for items in childs:
 					if items.tag == 'current':
-						value = items.attrib.get("temperature").encode("utf-8", 'ignore')
+						value = items.attrib.get("temperature")
 						return str(value) + "°C"
 		except:
 			return ''
@@ -113,8 +113,8 @@ class PlatoonHDWeather(Poll, Converter, object):
 			for childs in self.data:
 				for items in childs:
 					if items.tag == 'current':
-						cur_temp = items.attrib.get("temperature").encode("utf-8", 'ignore')
-						feels_temp = items.attrib.get("feelslike").encode("utf-8", 'ignore')
+						cur_temp = items.attrib.get("temperature")
+						feels_temp = items.attrib.get("feelslike")
 						return str(cur_temp) + '°C' + ", gefühlt " + str(feels_temp) + '°C'
 		except:
 			return ''
@@ -124,7 +124,7 @@ class PlatoonHDWeather(Poll, Converter, object):
 			for childs in self.data:
 				for items in childs:
 					if items.tag == 'current':
-						value = items.attrib.get("humidity").encode("utf-8", 'ignore')
+						value = items.attrib.get("humidity")
 						return str(value) + '% Luftfeuchte'
 		except:
 			return ''
@@ -134,7 +134,7 @@ class PlatoonHDWeather(Poll, Converter, object):
 			for childs in self.data:
 				for items in childs:
 					if items.tag == 'current':
-						value = items.attrib.get("winddisplay").encode("utf-8", 'ignore')
+						value = items.attrib.get("winddisplay")
 						return str(value)
 		except:
 			return ''
@@ -143,19 +143,19 @@ class PlatoonHDWeather(Poll, Converter, object):
 		try:
 			if self.type == "high0":
 				for items in self.data.findall(".//forecast[2]"):
-					value = items.get("high").encode("utf-8", 'ignore')
+					value = items.get("high")
 					return str(value) + "°C"
 			if self.type == "high1":
 				for items in self.data.findall(".//forecast[3]"):
-					value = items.get("high").encode("utf-8", 'ignore')
+					value = items.get("high")
 					return str(value) + "°C"
 			if self.type == "high2":
 				for items in self.data.findall(".//forecast[4]"):
-					value = items.get("high").encode("utf-8", 'ignore')
+					value = items.get("high")
 					return str(value) + "°C"
 			if self.type == "high3":
 				for items in self.data.findall(".//forecast[5]"):
-					value = items.get("high").encode("utf-8", 'ignore')
+					value = items.get("high")
 					return str(value) + "°C"
 		except:
 			return ''
@@ -164,19 +164,19 @@ class PlatoonHDWeather(Poll, Converter, object):
 		try:
 			if self.type == "low0":
 				for items in self.data.findall(".//forecast[2]"):
-					value = items.get("low").encode("utf-8", 'ignore')
+					value = items.get("low")
 					return str(value) + "°C"
 			if self.type == "low1":
 				for items in self.data.findall(".//forecast[3]"):
-					value = items.get("low").encode("utf-8", 'ignore')
+					value = items.get("low")
 					return str(value) + "°C"
 			if self.type == "low2":
 				for items in self.data.findall(".//forecast[4]"):
-					value = items.get("low").encode("utf-8", 'ignore')
+					value = items.get("low")
 					return str(value) + "°C"
 			if self.type == "low3":
 				for items in self.data.findall(".//forecast[5]"):
-					value = items.get("low").encode("utf-8", 'ignore')
+					value = items.get("low")
 					return str(value) + "°C"
 		except:
 			return ''
@@ -185,23 +185,23 @@ class PlatoonHDWeather(Poll, Converter, object):
 		try:
 			if self.type == "minmax0":
 				for items in self.data.findall(".//forecast[2]"):
-					min = items.get("low").encode("utf-8", 'ignore')
-					max = items.get("high").encode("utf-8", 'ignore')
+					min = items.get("low")
+					max = items.get("high")
 					return str(min) + "° / " + str(max) + "°"
 			if self.type == "minmax1":
 				for items in self.data.findall(".//forecast[3]"):
-					min = items.get("low").encode("utf-8", 'ignore')
-					max = items.get("high").encode("utf-8", 'ignore')
+					min = items.get("low")
+					max = items.get("high")
 					return str(min) + "° / " + str(max) + "°"
 			if self.type == "minmax2":
 				for items in self.data.findall(".//forecast[4]"):
-					min = items.get("low").encode("utf-8", 'ignore')
-					max = items.get("high").encode("utf-8", 'ignore')
+					min = items.get("low")
+					max = items.get("high")
 					return str(min) + "° / " + str(max) + "°"
 			if self.type == "minmax3":
 				for items in self.data.findall(".//forecast[5]"):
-					min = items.get("low").encode("utf-8", 'ignore')
-					max = items.get("high").encode("utf-8", 'ignore')
+					min = items.get("low")
+					max = items.get("high")
 					return str(min) + "° / " + str(max) + "°"
 		except:
 			return ''
@@ -210,19 +210,19 @@ class PlatoonHDWeather(Poll, Converter, object):
 		try:
 			if self.type == "shortday0":
 				for items in self.data.findall(".//forecast[2]"):
-					value = items.get("shortday").encode("utf-8", 'ignore')
+					value = items.get("shortday")
 					return str(value)
 			if self.type == "shortday1":
 				for items in self.data.findall(".//forecast[3]"):
-					value = items.get("shortday").encode("utf-8", 'ignore')
+					value = items.get("shortday")
 					return str(value)
 			if self.type == "shortday2":
 				for items in self.data.findall(".//forecast[4]"):
-					value = items.get("shortday").encode("utf-8", 'ignore')
+					value = items.get("shortday")
 					return str(value)
 			if self.type == "shortday3":
 				for items in self.data.findall(".//forecast[5]"):
-					value = items.get("shortday").encode("utf-8", 'ignore')
+					value = items.get("shortday")
 					return str(value)
 		except:
 			return ''
@@ -233,19 +233,19 @@ class PlatoonHDWeather(Poll, Converter, object):
 				for childs in self.data:
 					for items in childs:
 						if items.tag == "current":
-							value = items.attrib.get("skycode").encode("utf-8", 'ignore')
+							value = items.attrib.get("skycode")
 							return str(value)
 			if self.type == "icon1":
 				for items in self.data.findall(".//forecast[3]"):
-					value = items.get("skycodeday").encode("utf-8", 'ignore')
+					value = items.get("skycodeday")
 					return str(value)
 			if self.type == "icon2":
 				for items in self.data.findall(".//forecast[4]"):
-					value = items.get("skycodeday").encode("utf-8", 'ignore')
+					value = items.get("skycodeday")
 					return str(value)
 			if self.type == "icon3":
 				for items in self.data.findall(".//forecast[5]"):
-					value = items.get("skycodeday").encode("utf-8", 'ignore')
+					value = items.get("skycodeday")
 					return str(value)
 		except:
 			return "3200"
@@ -256,19 +256,19 @@ class PlatoonHDWeather(Poll, Converter, object):
 				for childs in self.data:
 					for items in childs:
 						if items.tag == "current":
-							value = items.attrib.get("skytext").encode("utf-8", 'ignore')
+							value = items.attrib.get("skytext")
 							return str(value)
 			if self.type == "text1":
 				for items in self.data.findall(".//forecast[3]"):
-					value = items.get("skytextday").encode("utf-8", 'ignore')
+					value = items.get("skytextday")
 					return str(value)
 			if self.type == "text2":
 				for items in self.data.findall(".//forecast[4]"):
-					value = items.get("skytextday").encode("utf-8", 'ignore')
+					value = items.get("skytextday")
 					return str(value)
 			if self.type == "text3":
 				for items in self.data.findall(".//forecast[5]"):
-					value = items.get("skytextday").encode("utf-8", 'ignore')
+					value = items.get("skytextday")
 					return str(value)
 		except:
 			return ''

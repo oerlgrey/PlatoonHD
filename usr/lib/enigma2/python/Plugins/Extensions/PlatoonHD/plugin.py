@@ -15,13 +15,25 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Plugins.Plugin import PluginDescriptor
 from Components.config import config
 from Components.Language import language
 from os import environ
 import gettext
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-import PlatoonHD
+from . import PlatoonHD
+
+python3 = False
+
+try:
+	import six
+	if six.PY2:
+		python3 = False
+	else:
+		python3 = True
+except ImportError:
+	python3 = False
 
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]
@@ -36,9 +48,15 @@ def _(txt):
 	return t
 
 def main(session, **kwargs):
-	reload(PlatoonHD)
+	global python3
 	try:
-		session.open(PlatoonHD.PlatoonHD)
+		if python3:
+			from six.moves import reload_module
+			reload_module(PlatoonHD)
+			session.open(PlatoonHD.PlatoonHD)
+		else:
+			reload(PlatoonHD)
+			session.open(PlatoonHD.PlatoonHD)
 	except:
 		import traceback
 		traceback.print_exc()

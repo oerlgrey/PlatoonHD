@@ -16,6 +16,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.ChoiceBox import ChoiceBox
@@ -29,14 +30,24 @@ from Components.Sources.StaticText import StaticText
 from Components.Pixmap import Pixmap
 from Components.Label import Label
 from Components.Sources.CanvasSource import CanvasSource
-from PIL import Image, ImageEnhance
+from PIL import Image
 from Components.Language import language
-import gettext, time, os, requests
+import gettext, time, json, os, requests
 from enigma import ePicLoad, eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from shutil import move, copyfile
-from lxml import etree
 from xml.etree.cElementTree import fromstring
+
+python3 = False
+
+try:
+	import six
+	if six.PY2:
+		python3 = False
+	else:
+		python3 = True
+except ImportError:
+	python3 = False
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -56,110 +67,65 @@ def translateBlock(block):
 			block = block.replace(x[0], x[1])
 	return block
 
+ColorList = [
+	("F0A30A", _("Amber")),
+	("B27708", _("Amber dark")),
+	("1B1775", _("Blue")),
+	("00002F", _("Blue dark")),
+	("7D5929", _("Brown")),
+	("3F2D15", _("Brown dark")),
+	("0050EF", _("Cobalt")),
+	("001F59", _("Cobalt dark")),
+	("1BA1E2", _("Cyan")),
+	("0F5B7F", _("Cyan dark")),
+	("FFC000", _("Yellow")),
+	("999999", _("Grey")),
+	("3F3F3F", _("Grey dark")),
+	("70AD11", _("Green")),
+	("213305", _("Green dark")),
+	("6D8764", _("Olive")),
+	("313D2D", _("Olive dark")),
+	("C3461B", _("Orange")),
+	("892E13", _("Orange dark")),
+	("035468", _("Petrol")),
+	("02404A", _("Petrol dark")),
+	("F472D0", _("Pink")),
+	("723562", _("Pink dark")),
+	("E51400", _("Red")),
+	("330400", _("Red dark")),
+	("000000", _("Black")),
+	("008A00", _("Emerald")),
+	("647687", _("Steel")),
+	("262C33", _("Steel dark")),
+	("6C0AAB", _("Violet")),
+	("1F0333", _("Violet dark")),
+	("FFFFFF", _("White"))
+	]
+
 config.plugins.PlatoonHD = ConfigSubsection()
-config.plugins.PlatoonHD.WindowColor = ConfigSelection(default="00002F", choices = [
-				("000000", _("black")),
-				("1F1F1F", _("dark grey")),
-				("2F0000", _("dark red")),
-				("00002F", _("dark blue")),
-				("001F00", _("dark green"))
-				])
+config.plugins.PlatoonHD.MenuColor = ConfigSelection(default = "3F3F3F", choices = ColorList)
+config.plugins.PlatoonHD.MenuColor2 = ConfigText(default = "")
+config.plugins.PlatoonHD.MenuFont1 = ConfigSelection(default = "FFFFFF", choices = ColorList)
+config.plugins.PlatoonHD.MenuFont2 = ConfigSelection(default = "FFC000", choices = ColorList)
+config.plugins.PlatoonHD.WindowColor = ConfigSelection(default = "00002F", choices = ColorList)
+config.plugins.PlatoonHD.WindowFont1 = ConfigSelection(default = "FFFFFF", choices = ColorList)
+config.plugins.PlatoonHD.WindowFont2 = ConfigSelection(default = "FFC000", choices = ColorList)
+config.plugins.PlatoonHD.SelectionColor1 = ConfigSelection(default = "892E13", choices = ColorList)
+config.plugins.PlatoonHD.SelectionColor2 = ConfigText(default = "")
+config.plugins.PlatoonHD.SelectionFont = ConfigSelection(default = "FFFFFF", choices = ColorList)
+config.plugins.PlatoonHD.ButtonFont = ConfigSelection(default = "FFFFFF", choices = ColorList)
+config.plugins.PlatoonHD.Progress = ConfigSelection(default = "C3461B", choices = ColorList)
 
-config.plugins.PlatoonHD.WindowTrans = ConfigSelection(default="17", choices = [
-				("00", _("off")),
-				("17", _("low")),
-				("2E", _("medium")),
-				("45", _("high"))
-				])
-
-config.plugins.PlatoonHD.WindowFont1 = ConfigSelection(default="FFFFFF", choices = [
-				("FFFFFF", _("white")),
-				("BFBFBF", _("grey")),
-				("FFC000", _("yellow")),
-				("FF7F00", _("orange")),
-				("3FBF3F", _("green")),
-				("007FFF", _("blue"))
-				])
-
-config.plugins.PlatoonHD.WindowFont2 = ConfigSelection(default="FFC000", choices = [
-				("FFFFFF", _("white")),
-				("BFBFBF", _("grey")),
-				("FFC000", _("yellow")),
-				("FF7F00", _("orange")),
-				("3FBF3F", _("green")),
-				("007FFF", _("blue"))
-				])
-
-config.plugins.PlatoonHD.MenuColor = ConfigSelection(default="3A3A3A", choices = [
-				("3A3A3A", _("grey")),
-				("86350D", _("orange")),
-				("710B11", _("red")),
-				("35294D", _("violet")),
-				("024F02", _("green")),
-				("17397D", _("blue")),
-				("035468", _("petrol"))
-				])
-
-config.plugins.PlatoonHD.MenuTrans = ConfigSelection(default="11", choices = [
+config.plugins.PlatoonHD.MenuTrans = ConfigSelection(default = "11", choices = [
 				("11", _("low")),
 				("3F", _("high"))
 				])
 
-config.plugins.PlatoonHD.MenuFont1 = ConfigSelection(default="FFFFFF", choices = [
-				("FFFFFF", _("white")),
-				("BFBFBF", _("grey")),
-				("FFC000", _("yellow")),
-				("FF7F00", _("orange")),
-				("3FBF3F", _("green")),
-				("007FFF", _("blue"))
-				])
-
-config.plugins.PlatoonHD.MenuFont2 = ConfigSelection(default="FFC000", choices = [
-				("FFFFFF", _("white")),
-				("BFBFBF", _("grey")),
-				("FFC000", _("yellow")),
-				("FF7F00", _("orange")),
-				("3FBF3F", _("green")),
-				("007FFF", _("blue"))
-				])
-
-config.plugins.PlatoonHD.SelectionColor1 = ConfigSelection(default="86350D", choices = [
-				("3A3A3A", _("grey")),
-				("86350D", _("orange")),
-				("930B0B", _("red")),
-				("482868", _("violet")),
-				("002868", _("blue")),
-				("0B630B", _("green")),
-				("02404A", _("petrol"))
-				])
-
-config.plugins.PlatoonHD.SelectionColor2 = ConfigText(default = "")
-
-config.plugins.PlatoonHD.SelectionFont = ConfigSelection(default="FFFFFF", choices = [
-				("FFFFFF", _("white")),
-				("BFBFBF", _("grey")),
-				("FFC000", _("yellow")),
-				("FF7F00", _("orange")),
-				("3FBF3F", _("green")),
-				("007FFF", _("blue"))
-				])
-
-config.plugins.PlatoonHD.ButtonFont = ConfigSelection(default="FFFFFF", choices = [
-				("FFFFFF", _("white")),
-				("BFBFBF", _("grey")),
-				("FFC000", _("yellow")),
-				("FF7F00", _("orange")),
-				("3FBF3F", _("green")),
-				("007FFF", _("blue"))
-				])
-
-config.plugins.PlatoonHD.Progress = ConfigSelection(default="FF4B05", choices = [
-				("FFFFFF", _("white")),
-				("FFC242", _("yellow")),
-				("FF4B05", _("orange")),
-				("742020", _("red")),
-				("207420", _("green")),
-				("202074", _("blue"))
+config.plugins.PlatoonHD.WindowTrans = ConfigSelection(default = "17", choices = [
+				("00", _("off")),
+				("17", _("low")),
+				("2E", _("medium")),
+				("45", _("high"))
 				])
 
 config.plugins.PlatoonHD.WeatherWidget = ConfigSelection(default = "weather-off", choices = [
@@ -186,7 +152,7 @@ config.plugins.PlatoonHD.msn_cityfound = ConfigText(default = "")
 config.plugins.PlatoonHD.msn_cityname = ConfigText(default = "")
 config.plugins.PlatoonHD.msn_code = ConfigText(default = "")
 
-config.plugins.PlatoonHD.msn_language = ConfigSelection(default="de-DE", choices = [
+config.plugins.PlatoonHD.msn_language = ConfigSelection(default = "de-DE", choices = [
 				("de-DE", _("Deutsch")),
 				("en-US", _("English")),
 				("ru-RU", _("Russian")),
@@ -251,7 +217,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self["helperimage"] = Pixmap()
 		self["Canvas"] = CanvasSource()
 		self["description"] = StaticText()
-		self["version"] = StaticText("Version 1.4.1")
+		self["version"] = StaticText("Version 2.0.6")
 
 		list = []
 		ConfigListScreen.__init__(self, list)
@@ -320,49 +286,38 @@ class PlatoonHD(ConfigListScreen, Screen):
 		option = self["config"].getCurrent()[1]
 
 		if option == config.plugins.PlatoonHD.SelectionColor1:
-			if option.value == "930B0B":
-				self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, "2D1010")
-			elif option.value == "0B630B":
-				self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, "102010")
-			elif option.value == "002868":
-				self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, "001535")
-			elif option.value == "482868":
-				self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, "1F0F2F")
-			elif option.value == "02404A":
-				self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, "012A3A")
-			elif option.value == "86350D":
-				self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, "661F02")
-			elif option.value == "3A3A3A":
-				self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, "202020")
-		elif option in (config.plugins.PlatoonHD.WindowColor, config.plugins.PlatoonHD.WindowFont1, config.plugins.PlatoonHD.WindowFont2, config.plugins.PlatoonHD.MenuColor, config.plugins.PlatoonHD.MenuFont1, config.plugins.PlatoonHD.MenuFont2, config.plugins.PlatoonHD.SelectionFont, config.plugins.PlatoonHD.Progress):
+			self.showGradient(config.plugins.PlatoonHD.SelectionColor1.value, self.calcSecondcolor(config.plugins.PlatoonHD.SelectionColor1.value))
+		elif option == config.plugins.PlatoonHD.MenuColor:
+			self.showGradient(config.plugins.PlatoonHD.MenuColor.value, self.calcSecondcolor(config.plugins.PlatoonHD.MenuColor.value))
+		elif option in (config.plugins.PlatoonHD.WindowColor, config.plugins.PlatoonHD.WindowFont1, config.plugins.PlatoonHD.WindowFont2, config.plugins.PlatoonHD.MenuFont1, config.plugins.PlatoonHD.MenuFont2, config.plugins.PlatoonHD.SelectionFont, config.plugins.PlatoonHD.Progress):
 			self.showColor(self.hexRGB(option.value))
 		elif option == config.plugins.PlatoonHD.WindowTrans:
 			if option.value == "00":
-				self.showText(30,_("no transparency"))
+				self.showText(30, _("no transparency"))
 			elif option.value == "17":
-				self.showText(30,_("low transparency"))
+				self.showText(30, _("low transparency"))
 			elif option.value == "2E":
-				self.showText(30,_("medium transparency"))
+				self.showText(30, _("medium transparency"))
 			elif option.value == "45":
-				self.showText(30,_("high transparency"))
+				self.showText(30, _("high transparency"))
 		elif option == config.plugins.PlatoonHD.MenuTrans:
 			if option.value == "11":
-				self.showText(30,_("low transparency"))
+				self.showText(30, _("low transparency"))
 			elif option.value == "3F":
-				self.showText(30,_("high transparency"))
+				self.showText(30, _("high transparency"))
 		elif option == config.plugins.PlatoonHD.WeatherWidget:
 			if option.value == "weather-off":
-				self.showText(30,_("Weather off"))
+				self.showText(30, _("Weather off"))
 			elif option.value == "infobar":
-				self.showText(30,_("Infobar"))
+				self.showText(30, _("Infobar"))
 			elif option.value == "menu":
-				self.showText(30,_("Menu"))
+				self.showText(30, _("Menu"))
 			elif option.value == "infobar-menu":
-				self.showText(30,_("Infobar & Menu"))
+				self.showText(30, _("Infobar & Menu"))
 		elif option in (config.plugins.PlatoonHD.msn_searchby, config.plugins.PlatoonHD.msn_code, config.plugins.PlatoonHD.msn_cityname):
 			self.showText(30, config.plugins.PlatoonHD.msn_cityfound.value + "\n" + config.plugins.PlatoonHD.msn_code.value)
 		elif option == config.plugins.PlatoonHD.msn_language:
-			self.showText(30,_("Language") + ":\n" + option.value)
+			self.showText(30, _("Language") + ":\n" + option.value)
 		else:
 			self["helperimage"].show()
 
@@ -423,25 +378,29 @@ class PlatoonHD(ConfigListScreen, Screen):
 
 	def getCityByIP(self):
 		try:
-			res_city = requests.get('http://ip-api.com/json/?lang=de&fields=status,city', timeout=1)
+			res_city = requests.get('http://ip-api.com/json/?lang=de&fields=status,city', timeout = 1)
 			data_city = res_city.json()
 			if data_city['status'] == 'success':
-				return str(data_city['city'])
+				return data_city['city']
 		except:
 			self.session.open(MessageBox, _("No valid location found."), MessageBox.TYPE_INFO, timeout = 10)
 
 	def checkCode(self):
+		global python3
 		if self.InternetAvailable and config.plugins.PlatoonHD.WeatherWidget.value in ("infobar", "menu", "infobar-menu"):
 			option = self["config"].getCurrent()[1]
 			if option.value == "auto-ip":
 				cityip = self.getCityByIP()
 				iplist = []
 				try:
-					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=' + str(cityip) + '&culture=' + str(config.plugins.PlatoonHD.msn_language.value), timeout=1)
+					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=' + str(cityip) + '&culture=' + str(config.plugins.PlatoonHD.msn_language.value), timeout = 1)
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):
-						ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
+						if python3:
+							ipcity = weather.get('weatherlocationname')
+						else:
+							ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
 						weathercode = weather.get('weatherlocationcode')
 						iplist.append((ipcity, weathercode + "//" + ipcity))
 
@@ -452,7 +411,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 							config.plugins.PlatoonHD.msn_code.save()
 							config.plugins.PlatoonHD.msn_cityfound.value = str(callback.split("//")[1].split(",")[0])
 							config.plugins.PlatoonHD.msn_cityfound.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PlatoonHD.msn_code.value), MessageBox.TYPE_INFO, timeout = 10)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(callback.split("//")[0]), MessageBox.TYPE_INFO, timeout = 10)
 						self.showPreview()
 					self.session.openWithCallback(WeatherCodeCallBack, ChoiceBox, title = _("Choose your location:"), list = iplist)
 
@@ -462,11 +421,14 @@ class PlatoonHD(ConfigListScreen, Screen):
 			if option.value == "location" or option == config.plugins.PlatoonHD.msn_cityname:
 				citylist = []
 				try:
-					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=' + str(config.plugins.PlatoonHD.msn_cityname.value) + '&culture=' + str(config.plugins.PlatoonHD.msn_language.value), timeout=1)
+					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=' + str(config.plugins.PlatoonHD.msn_cityname.value) + '&culture=' + str(config.plugins.PlatoonHD.msn_language.value), timeout = 1)
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):
-						city = weather.get('weatherlocationname').encode("utf-8", 'ignore')
+						if python3:
+							city = weather.get('weatherlocationname')
+						else:
+							city = weather.get('weatherlocationname').encode("utf-8", 'ignore')
 						code = weather.get('weatherlocationcode')
 						citylist.append((city, code + "//" + city))
 
@@ -477,7 +439,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 							config.plugins.PlatoonHD.msn_code.save()
 							config.plugins.PlatoonHD.msn_cityfound.value = str(callback.split("//")[1].split(",")[0])
 							config.plugins.PlatoonHD.msn_cityfound.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PlatoonHD.msn_code.value), MessageBox.TYPE_INFO, timeout = 10)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(callback.split("//")[0]), MessageBox.TYPE_INFO, timeout = 10)
 						self.showPreview()
 					self.session.openWithCallback(LocationCallBack, ChoiceBox, title = _("Choose your location:"), list = citylist)
 
@@ -503,7 +465,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 			config.plugins.PlatoonHD.msn_cityname.save()
 
 	def reboot(self):
-		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox, _("Do you really want to reboot now?"), MessageBox.TYPE_YESNO)
+		restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("Do you really want to reboot now?"), MessageBox.TYPE_YESNO)
 		restartbox.setTitle(_("Restart GUI"))
 
 	def save(self):
@@ -519,6 +481,9 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(['name="PlatoonBKbg" value="#1700002F', 'name="PlatoonBKbg" value="#' + config.plugins.PlatoonHD.WindowTrans.value + config.plugins.PlatoonHD.WindowColor.value])
 		self.skinSearchAndReplace.append(['name="background" value="#1700002F', 'name="background" value="#' + config.plugins.PlatoonHD.WindowTrans.value + config.plugins.PlatoonHD.WindowColor.value])
 		self.skinSearchAndReplace.append(['name="PlatoonGYbg" value="#113A3A3A', 'name="PlatoonGYbg" value="#' + config.plugins.PlatoonHD.MenuTrans.value + config.plugins.PlatoonHD.MenuColor.value])
+		config.plugins.PlatoonHD.MenuColor2.value = self.calcSecondcolor(config.plugins.PlatoonHD.MenuColor.value)
+		config.plugins.PlatoonHD.MenuColor2.save()
+		self.skinSearchAndReplace.append(['name="PlatoonGYbg2" value="#113A3A3A', 'name="PlatoonGYbg2" value="#' + config.plugins.PlatoonHD.MenuTrans.value + config.plugins.PlatoonHD.MenuColor2.value])
 
 		# fonts
 		self.skinSearchAndReplace.append(['name="PlatoonBKfg1" value="#00FFFFFF', 'name="PlatoonBKfg1" value="#00' + config.plugins.PlatoonHD.WindowFont1.value])
@@ -531,36 +496,22 @@ class PlatoonHD(ConfigListScreen, Screen):
 
 		# progress
 		self.skinSearchAndReplace.append(['name="PlatoonProgress" value="#00FF4B05', 'name="PlatoonProgress" value="#00' + config.plugins.PlatoonHD.Progress.value])
-		
+
+		# icons
+		if config.plugins.PlatoonHD.MenuColor.value in ("FFFFFF", "F0A30A", "1BA1E2", "FFC000"):
+			self.skinSearchAndReplace.append(['icons-light', 'icons-dark'])
+		if config.plugins.PlatoonHD.WindowColor.value in ("FFFFFF", "F0A30A", "1BA1E2", "FFC000", "999999", "70AD11", "F472D0"):
+			self.skinSearchAndReplace.append(['global-icons', 'icons-dark'])
+			self.skinSearchAndReplace.append(['name="PlatoonIconfg" value="#00FFFFFF', 'name="PlatoonIconfg" value="#00000000'])
+			self.skinSearchAndReplace.append(['name="PlatoonLine" value="#00FFFFFF', 'name="PlatoonLine" value="#00000000'])
+
 		# selection background
 		self.skinSearchAndReplace.append(['name="PlatoonSelbg" value="#0086350D', 'name="PlatoonSelbg" value="#00' + config.plugins.PlatoonHD.SelectionColor1.value])
-		if config.plugins.PlatoonHD.SelectionColor1.value == "930B0B":
-			config.plugins.PlatoonHD.SelectionColor2.value = "2D1010"
-			config.plugins.PlatoonHD.SelectionColor2.save()
-		elif config.plugins.PlatoonHD.SelectionColor1.value == "0B630B":
-			config.plugins.PlatoonHD.SelectionColor2.value = "102010"
-			config.plugins.PlatoonHD.SelectionColor2.save()
-		elif config.plugins.PlatoonHD.SelectionColor1.value == "482868":
-			config.plugins.PlatoonHD.SelectionColor2.value = "1F0F2F"
-			config.plugins.PlatoonHD.SelectionColor2.save()
-		elif config.plugins.PlatoonHD.SelectionColor1.value == "02404A":
-			config.plugins.PlatoonHD.SelectionColor2.value = "012A3A"
-			config.plugins.PlatoonHD.SelectionColor2.save()
-		elif config.plugins.PlatoonHD.SelectionColor1.value == "86350D":
-			config.plugins.PlatoonHD.SelectionColor2.value = "661F02"
-			config.plugins.PlatoonHD.SelectionColor2.save()
-		elif config.plugins.PlatoonHD.SelectionColor1.value == "3A3A3A":
-			config.plugins.PlatoonHD.SelectionColor2.value = "202020"
-			config.plugins.PlatoonHD.SelectionColor2.save()
-		else:
-			config.plugins.PlatoonHD.SelectionColor2.value = "001535"
-			config.plugins.PlatoonHD.SelectionColor2.save()
+		config.plugins.PlatoonHD.SelectionColor2.value = self.calcSecondcolor(config.plugins.PlatoonHD.SelectionColor1.value)
+		config.plugins.PlatoonHD.SelectionColor2.save()
 
 		# graphics
-		if config.plugins.PlatoonHD.MenuTrans.value == "3F":
-			self.changeMenuColors()
-		else:
-			self.copyMenuFiles()
+		self.changeMenuColors()
 		self.makeSelectionpng()
 
 		# weather
@@ -607,7 +558,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 
 	def restart(self):
 		configfile.save()
-		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox, _("GUI needs a restart to apply the settings.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
+		restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("GUI needs a restart to apply the settings.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
 		restartbox.setTitle(_("Restart GUI"))
 
 	def appendSkinFile(self, appendFileName):
@@ -638,7 +589,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 			self.close()
 
 	def exit(self):
-		askExit = self.session.openWithCallback(self.doExit,MessageBox, _("Do you really want to exit without saving?"), MessageBox.TYPE_YESNO)
+		askExit = self.session.openWithCallback(self.doExit, MessageBox, _("Do you really want to exit without saving?"), MessageBox.TYPE_YESNO)
 		askExit.setTitle(_("Exit"))
 
 	def doExit(self, answer):
@@ -663,7 +614,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 			return "teamblue"
 
 	def getInternetAvailable(self):
-		import ping
+		from . import ping
 		r = ping.doOne("8.8.8.8", 1.5)
 		if r != None and r <= 1.5:
 			return True
@@ -706,68 +657,55 @@ class PlatoonHD(ConfigListScreen, Screen):
 		c.flush()
 
 	def changeMenuColors(self):
-		self.changeColor("bs_b", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("bs_bl", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("bs_br", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("bs_l", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("bs_r", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("bs_t", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("bs_tl", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("bs_tr", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("dvd_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("full_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("infobar_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("mediaplayer_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("menu_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("player_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("pvrstate_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("shift_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("sib_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("virtualkeyboard_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("volume_background", config.plugins.PlatoonHD.MenuColor.value)
-		self.changeColor("webradio_background", config.plugins.PlatoonHD.MenuColor.value)
-		if self.E2DistroVersion == "openhdf":
-			self.changeColor("infobarepg_background", config.plugins.PlatoonHD.MenuColor.value)
-			self.changeColor("infobareventview_background", config.plugins.PlatoonHD.MenuColor.value)
-			self.changeColor("virtualkeyboard_background2", config.plugins.PlatoonHD.MenuColor.value)
+		self.makeBackgroundpng("bs_b", "bs_b", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("bs_bl", "bs_bl", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("bs_br", "bs_br", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("bs_l", "bs_l", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("bs_r", "bs_r", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("bs_t", "bs_t", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("bs_tl", "bs_tl", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("bs_tr", "bs_tr", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("dvd", "dvd_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("full", "full_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("infobar", "infobar_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("mediaplayer", "mediaplayer_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("menu", "menu_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("player", "player_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("pvrstate", "pvrstate_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("shift", "shift_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("sib", "sib_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("webradio", "webradio_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		self.makeBackgroundpng("volume", "volume_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuTrans.value)
+		if self.E2DistroVersion == "teamblue":
+			self.makeBackgroundpng("virtualkeyboard", "virtualkeyboard_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+		elif self.E2DistroVersion == "openhdf":
+			self.makeBackgroundpng("infobarepg", "infobarepg_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+			self.makeBackgroundpng("infobareventview", "infobareventview_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
+			self.makeBackgroundpng("virtualkeyboard2", "virtualkeyboard2_background", config.plugins.PlatoonHD.MenuColor.value, config.plugins.PlatoonHD.MenuColor2.value, config.plugins.PlatoonHD.MenuTrans.value)
 
-	def copyMenuFiles(self):
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_b.png", self.graphics + "bs_b.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_bl.png", self.graphics + "bs_bl.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_br.png", self.graphics + "bs_br.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_l.png", self.graphics + "bs_l.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_r.png", self.graphics + "bs_r.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_t.png", self.graphics + "bs_t.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_tl.png", self.graphics + "bs_tl.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/bs_tr.png", self.graphics + "bs_tr.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/dvd_background.png", self.graphics + "dvd_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/full_background.png", self.graphics + "full_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/infobar_background.png", self.graphics + "infobar_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/mediaplayer_background.png", self.graphics + "mediaplayer_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/menu_background.png", self.graphics + "menu_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/player_background.png", self.graphics + "player_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/pvrstate_background.png", self.graphics + "pvrstate_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/shift_background.png", self.graphics + "shift_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/sib_background.png", self.graphics + "sib_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/virtualkeyboard_background.png", self.graphics + "virtualkeyboard_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/volume_background.png", self.graphics + "volume_background.png")
-		copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/webradio_background.png", self.graphics + "webradio_background.png")
-		if self.E2DistroVersion == "openhdf":
-			copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/infobarepg_background.png", self.graphics + "infobarepg_background.png")
-			copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/infobareventview_background.png", self.graphics + "infobareventview_background.png")
-			copyfile(self.templates + config.plugins.PlatoonHD.MenuColor.value + "/virtualkeyboard_background2.png", self.graphics + "virtualkeyboard_background2.png")
+	def makeBackgroundpng(self, input, output, color1, color2, trans):
+		color1 = color1[-6:]
+		r1 = int(color1[0:2], 16)
+		g1 = int(color1[2:4], 16)
+		b1 = int(color1[4:6], 16)
+		color2 = color2[-6:]
+		r2 = int(color2[0:2], 16)
+		g2 = int(color2[2:4], 16)
+		b2 = int(color2[4:6], 16)
+		trans = 255 - int(trans, 16)
 
-	def changeColor(self, name, color):
-		color = color[-6:]
-		r = int(color[0:2], 16)
-		g = int(color[2:4], 16)
-		b = int(color[4:6], 16)
-
-		img = Image.open(self.templates + color + '/' + name + ".png")
-		mask1 = Image.new("RGBA", img.size, (r, g, b, 0))
-		mask2 = Image.new("L", img.size, 213)
-		im = Image.composite(img, mask1, mask2)
-		im.save(self.graphics + name + ".png")
+		mask = Image.open(self.templates + input + "_mask.png").convert('L')
+		border = Image.open(self.templates + input + "_border.png")
+		gradient = Image.new("RGBA", (1, mask.size[1]), (r2, g2, b2, trans))
+		for pos in range(0, mask.size[1]):
+			p = pos / float(mask.size[1])
+			r = r2 * p + r1 * (1 - p)
+			g = g2 * p + g1 * (1 - p)
+			b = b2 * p + b1 * (1 - p)
+			gradient.putpixel((0, pos), (int(r), int(g), int(b), trans))
+		gradient = gradient.resize(mask.size)
+		border.paste(gradient, (0, 0), mask)
+		border.save(self.graphics + output + ".png")
 
 	def makeSelectionpng(self):
 		self.makeGradientpng("sel_30", 1220, 30, config.plugins.PlatoonHD.SelectionColor1.value, config.plugins.PlatoonHD.SelectionColor2.value)
@@ -804,12 +742,33 @@ class PlatoonHD(ConfigListScreen, Screen):
 		gradient = gradient.resize((width, height))
 		gradient.save(self.graphics + name + ".png")
 
+	def calcSecondcolor(self, color):
+		color = color[-6:]
+		r1 = int(color[0:2], 16)
+		r2 = r1 - 24
+		if r2 <= 0:
+			r2 = 0
+		g1 = int(color[2:4], 16)
+		g2 = g1 - 24
+		if g2 <= 0:
+			g2 = 0
+		b1 = int(color[4:6], 16)
+		b2 = b1 - 24
+		if b2 <= 0:
+			b2 = 0
+		secondcolor = str(hex(r2)[2:4]).zfill(2) + str(hex(g2)[2:4]).zfill(2) + str(hex(b2)[2:4]).zfill(2)
+		return secondcolor
+
+	def hex2dec(self, color):
+		dec = int(color, 16)
+		return str(dec)
+
 	def hexRGB(self, color):
 		color = color[-6:]
 		r = int(color[0:2], 16)
 		g = int(color[2:4], 16)
 		b = int(color[4:6], 16)
-		return (r << 16)|(g << 8) | b
+		return (r << 16) | (g << 8) | b
 
 	def RGB(self, r, g, b):
 		return (r << 16) | (g << 8) | b

@@ -16,12 +16,11 @@
 #  please contact me at ochzoetna@gmail.com
 
 from Components.Converter.Converter import Converter
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from enigma import iPlayableService, iPlayableServicePtr, iServiceInformation, eTimer, eLabel
 from Components.Element import cached, ElementError
 from time import localtime, strftime, time, gmtime, asctime
 from Components.Sources.Clock import Clock
-
 
 class PlatoonHDServiceEndTime(Poll, Converter, object):
 	TYPE_ENDTIME = 0
@@ -34,8 +33,8 @@ class PlatoonHDServiceEndTime(Poll, Converter, object):
 			self.type = self.TYPE_ENDTIME
 
 		self.poll_enabled = True
-  
-        def getSeek(self):
+
+	def getSeek(self):
 		s = self.source.service
 		return s and s.seek()
 
@@ -48,33 +47,32 @@ class PlatoonHDServiceEndTime(Poll, Converter, object):
 		if pos[0]:
 			return 0
 		return pos[1]
-        
-        @cached
+
+	@cached
 	def getLength(self):
 		seek = self.getSeek()
 		if seek is None:
 			return None
 		length = seek.getLength()
-                if length[0]:
+		if length[0]:
 			return 0
 		return length[1]
 
-		
-        @cached
+	@cached
 	def getText(self):
-                seek = self.getSeek()
+		seek = self.getSeek()
 		if seek is None:
 			return ""
 		else:
 			if self.type == self.TYPE_ENDTIME:
-				e = (self.length / 90000)        
-                                s = self.position / 90000
-                                return strftime("%H:%M", localtime(time() + (self.length / 90000 - self.position / 90000)))   
-        
+				e = (self.length / 90000)
+				s = self.position / 90000
+				return strftime("%H:%M", localtime(time() + (self.length / 90000 - self.position / 90000)))
+
 	range = 10000
 
 	position = property(getPosition)
-        length = property(getLength)
+	length = property(getLength)
 	text = property(getText)
 
 	def changed(self, what):

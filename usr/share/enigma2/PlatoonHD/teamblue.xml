@@ -22,6 +22,7 @@
     <color name="PlatoonMarkedfg" value="#0070AD11" />
     <color name="background" value="#1700002F" />
     <color name="PlatoonGYbg" value="#113A3A3A" />
+    <color name="PlatoonGYbg2" value="#113A3A3A" />
     <color name="PlatoonBKbg" value="#1700002F" />
     <color name="PlatoonSelbg" value="#0086350D" />
     <color name="PlatoonLine" value="#00FFFFFF" />
@@ -303,21 +304,21 @@
 	</screen>
 	
 	<screen name="menu_clock">
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="938,394" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="938,394" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	    <convert type="PlatoonHDClockToText">Format:%H</convert>
 	  </widget>
-	  <eLabel backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="995,394" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1005,394" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <eLabel backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="995,394" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1005,394" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	    <convert type="PlatoonHDClockToText">Format:%M</convert>
 	  </widget>
-	  <eLabel backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1061,408" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1071,408" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <eLabel backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1061,408" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1071,408" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	    <convert type="PlatoonHDClockToText">Format:%S</convert>
 	  </widget>
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;24" foregroundColor="PlatoonGYfg1" halign="center" position="928,461" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" halign="center" position="928,461" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	    <convert type="PlatoonHDClockToText">Format:%A</convert>
 	  </widget>
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="928,492" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="928,492" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	    <convert type="PlatoonHDClockToText">Format:%e. %B</convert>
 	  </widget>
 	</screen>
@@ -329,25 +330,25 @@
 	  <widget source="session.CurrentService" position="862,337" transparent="1" zPosition="8" size="105,105" render="PlatoonHDWetterPicon" alphatest="blend" path="WetterIcons">
 		<convert  type="PlatoonHDWeather">icon_cur</convert>
 	  </widget>
-	  <widget source="session.CurrentService" render="Label" position="968,366" size="150,49" font="Regular2;38" foregroundColor="PlatoonGYfg2" backgroundColor="PlatoonGYbg" noWrap="1" halign="center" transparent="1" zPosition="3">
+	  <widget source="session.CurrentService" render="Label" position="968,366" size="150,49" font="Regular2;38" foregroundColor="PlatoonGYfg2" backgroundColor="PlatoonGYbg2" noWrap="1" halign="center" transparent="1" zPosition="3">
 		<convert type="PlatoonHDWeather">temp_cur</convert>
 	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg" font="Regular;26" foregroundColor="PlatoonGYfg1" render="Label" position="1118,351" size="100,33" source="session.CurrentService" zPosition="8" transparent="1">
+	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;26" foregroundColor="PlatoonGYfg1" render="Label" position="1118,351" size="100,33" source="session.CurrentService" zPosition="8" transparent="1">
 		<convert type="PlatoonHDWeather">high0</convert>
 	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg" font="Regular;26" foregroundColor="PlatoonGYfg1" render="Label" position="1118,397" size="100,33" source="session.CurrentService" zPosition="8" transparent="1">
+	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;26" foregroundColor="PlatoonGYfg1" render="Label" position="1118,397" size="100,33" source="session.CurrentService" zPosition="8" transparent="1">
 		<convert type="PlatoonHDWeather">low0</convert>
 	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,461" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
+	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,461" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
 		<convert type="PlatoonHDWeather">city</convert>
 	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,496" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
+	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,496" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
 		<convert type="PlatoonHDWeather">wind</convert>
 	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,531" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
+	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,531" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
 		<convert type="PlatoonHDWeather">humidity</convert>
 	  </widget>
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,566" size="336,60" source="session.CurrentService" noWrap="1" transparent="1" zPosition="8" halign="center" valign="top" >
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,566" size="336,60" source="session.CurrentService" noWrap="1" transparent="1" zPosition="8" halign="center" valign="top" >
 		<convert type="PlatoonHDWeather">text_cur</convert>
 	  </widget>
 	</screen>
@@ -374,33 +375,33 @@
 	</screen>
 	
 	<screen name="NameRedGreen">
-      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="240,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="240,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	</screen>
 	
 	<screen name="NameRedGreenYellowBlue">
-      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="240,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="240,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	</screen>
 	
 	<screen name="SourceRedGreen">
-      <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	</screen>
 	
 	<screen name="SourceRedGreenYellow">
-      <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	</screen>
 	
 	<screen name="SourceRedGreenYellowBlue">
-      <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-      <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+      <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	</screen>
 	
 	<screen name="Title-big">
@@ -412,18 +413,18 @@
 	</screen>
 	
 	<screen name="MenuOKExit">
-	  <ePixmap pixmap="PlatoonHD/global-icons/key_menu.png" position="1095,660" size="43,22" alphatest="blend" />
-      <ePixmap pixmap="PlatoonHD/global-icons/key_ok.png" position="1145,660" size="43,22" alphatest="blend" />
-      <ePixmap pixmap="PlatoonHD/global-icons/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
+	  <ePixmap pixmap="PlatoonHD/icons-light/key_menu.png" position="1095,660" size="43,22" alphatest="blend" />
+      <ePixmap pixmap="PlatoonHD/icons-light/key_ok.png" position="1145,660" size="43,22" alphatest="blend" />
+      <ePixmap pixmap="PlatoonHD/icons-light/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
 	</screen>
 	
 	<screen name="OKExit">
-      <ePixmap pixmap="PlatoonHD/global-icons/key_ok.png" position="1145,660" size="43,22" alphatest="blend" />
-      <ePixmap pixmap="PlatoonHD/global-icons/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
+      <ePixmap pixmap="PlatoonHD/icons-light/key_ok.png" position="1145,660" size="43,22" alphatest="blend" />
+      <ePixmap pixmap="PlatoonHD/icons-light/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
 	</screen>
 	
 	<screen name="Exit">
-      <ePixmap pixmap="PlatoonHD/global-icons/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
+      <ePixmap pixmap="PlatoonHD/icons-light/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
 	</screen>
 	
 	<screen name="Webradio1">
@@ -487,13 +488,13 @@
 	  </widget>
       <widget backgroundColor="PlatoonBKbg" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" source="playtext" render="Label" position="42,520" size="736,108" transparent="1" valign="center" zPosition="2" />
       <widget backgroundColor="PlatoonBKbg" font="Regular2;22" foregroundColor="PlatoonBKfg2" name="help" position="42,520" size="736,108" transparent="1" valign="center" zPosition="3" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_red2" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="3" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_green2" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="3" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-	  <widget name="buttons_abdeck" position="540,655" zPosition="2" size="470,26" font="Regular;20" valign="center" halign="left" foregroundColor="PlatoonButtonfg" backgroundColor="PlatoonGYbg" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_red2" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="3" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_green2" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="3" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+	  <widget name="buttons_abdeck" position="540,655" zPosition="2" size="470,26" font="Regular;20" valign="center" halign="left" foregroundColor="PlatoonButtonfg" backgroundColor="PlatoonGYbg2" />
       <widget name="rec_pic" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/webradioFS/skin/images/rec1.png" position="1030,668" size="40,30" zPosition="2" />
 	</screen>
 	
@@ -502,10 +503,10 @@
       <widget backgroundColor="PlatoonBKbg" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" name="rec_txt" position="42,80" size="736,27" transparent="1" valign="center" zPosition="2" />
       <widget backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" name="config" itemHeight="26" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,110" size="736,416" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="0" zPosition="3" />
       <widget backgroundColor="PlatoonBKbg" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" name="playtext" position="42,545" size="736,81" transparent="1" valign="center" zPosition="2" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-      <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+      <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	</screen>
 	
 	<screen name="EventView-template">
@@ -548,14 +549,14 @@
 	  <widget backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1127,558" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%M</convert>
 	  </widget>
-	  <eLabel backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1183,572" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1192,572" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <eLabel backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1183,572" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1192,572" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%S</convert>
 	  </widget>
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;24" foregroundColor="PlatoonGYfg1" halign="center" position="1051,625" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" halign="center" position="1051,625" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%A</convert>
 	  </widget>
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="1051,656" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="1051,656" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%e. %B</convert>
 	  </widget>
 	</screen>
@@ -747,7 +748,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 		<convert type="PlatoonHDEventTime">Duration</convert>
 		<convert type="PlatoonHDClockToText">InMinutes</convert>
 	  </widget>
-	  <widget source="session.CurrentService" render="Label" position="42,681" size="1014,22" font="Regular;18" foregroundColor="PlatoonGYfg1" backgroundColor="PlatoonGYbg" noWrap="1" transparent="1">
+	  <widget source="session.CurrentService" render="Label" position="42,681" size="1014,22" font="Regular;18" foregroundColor="PlatoonGYfg1" backgroundColor="PlatoonGYbg2" noWrap="1" transparent="1">
 	    <convert type="PlatoonHDECMLine">VeryLong,FTAInvisible</convert>
 	  </widget>
 	</screen>
@@ -803,14 +804,34 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	  <widget backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1139,546" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%M</convert>
 	  </widget>
-	  <eLabel backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1195,560" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1204,560" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <eLabel backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1195,560" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1204,560" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%S</convert>
 	  </widget>
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;24" foregroundColor="PlatoonGYfg1" halign="center" position="1063,613" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" halign="center" position="1063,613" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%A</convert>
 	  </widget>
-	  <widget backgroundColor="PlatoonGYbg" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="1063,644" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="1063,644" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="PlatoonHDClockToText">Format:%e. %B</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="sib-clock">
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1072,546" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="PlatoonHDClockToText">Format:%H</convert>
+	  </widget>
+	  <eLabel backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1129,546" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1139,546" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="PlatoonHDClockToText">Format:%M</convert>
+	  </widget>
+	  <eLabel backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1195,560" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1204,560" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="PlatoonHDClockToText">Format:%S</convert>
+	  </widget>
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" halign="center" position="1063,613" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="PlatoonHDClockToText">Format:%A</convert>
+	  </widget>
+	  <widget backgroundColor="PlatoonGYbg2" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="1063,644" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="PlatoonHDClockToText">Format:%e. %B</convert>
 	  </widget>
 	</screen>
@@ -933,7 +954,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="infobar-style"/>
 	<panel name="infobar-icons"/>
 	<panel name="sib_background"/>
-	<panel name="infobar-clock"/>
+	<panel name="sib-clock"/>
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_mainmenu" position="0,0" size="1280,720" title="Main menu">
@@ -948,7 +969,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     </widget>
     <panel name="title-small"/>
     <panel name="Colorbuttons"/>
-	<widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+	<widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="mainmenu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -965,7 +986,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     </widget>
     <panel name="title-small"/>
     <panel name="Colorbuttons"/>
-	<widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+	<widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="mainmenu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -994,8 +1015,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="450,280" size="380,120" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_red1.png" position="450,435" size="190,5" />
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_green1.png" position="650,435" size="190,5" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="455,409" size="130,26" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="655,409" size="130,26" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="455,409" size="130,26" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="655,409" size="130,26" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" transparent="1" zPosition="1" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UI3DSetupScreen" position="0,0" size="1280,720" title="UI 3D setup">
@@ -1004,8 +1025,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -1026,8 +1047,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -1035,10 +1056,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*FilebrowserScreen*-->
 	<widget backgroundColor="PlatoonBKbg" name="list_left" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="580,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" name="list_right" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="658,80" size="580,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="blue" position="790,655" size="300,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="blue" position="790,655" size="300,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Title-big"/>
     <panel name="full_background"/>
     <panel name="Colorbuttons"/>
@@ -1070,7 +1091,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" name="file_list" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,450" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget source="status" render="Label" position="42,565" zPosition="1" size="736,56" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" backgroundColor="PlatoonBKbg" transparent="1" />
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -1095,7 +1116,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -1446,8 +1467,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" position="20,158" render="Label" size="560,27" source="introduction" transparent="1" valign="center" />
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_red1.png" position="15,227" size="200,5" />
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_green1.png" position="265,227" size="200,5" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="20,200" size="220,26" render="Label" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="270,200" size="220,26" render="Label" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="20,200" size="220,26" render="Label" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="270,200" size="220,26" render="Label" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" transparent="1" zPosition="1" />
 	<eLabel backgroundColor="PlatoonBKbg" position="0,0" size="600,250" transparent="0" zPosition="-10" />
     <ePixmap pixmap="PlatoonHD/global-icons/key_exit.png" position="537,205" size="43,22" alphatest="blend" />
   </screen>
@@ -1482,8 +1503,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget source="DNS2" render="Label" position="542,552" size="220,24" font="Regular;20" halign="right" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" />
     <widget name="HelpWindow" position="42,490" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -1498,7 +1519,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -1594,7 +1615,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     </widget>
     <widget source="introduction" render="Label" position="42,585" size="736,27" zPosition="10" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" backgroundColor="PlatoonBKbg" transparent="1"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -1622,8 +1643,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     </widget>
     <widget backgroundColor="PlatoonBKbg" source="introduction" render="Label" zPosition="1" position="42,585" size="736,28" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" transparent="1" />
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -1656,8 +1677,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     </widget>
     <widget backgroundColor="PlatoonBKbg" source="introduction" render="Label" position="42,585" size="736,27" zPosition="10" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" transparent="1"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -1669,7 +1690,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget source="introduction" render="Label" position="42,460" size="736,27" zPosition="10" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" backgroundColor="PlatoonBKbg" transparent="1"/>
     <widget name="HelpWindow" position="42,490" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
   </screen>
@@ -1718,7 +1739,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -1773,7 +1794,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
     <panel name="SourceRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -1783,7 +1804,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -2167,10 +2188,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" name="red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -2214,7 +2235,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
     <panel name="SourceRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -2329,7 +2350,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
     <panel name="SourceRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="keyblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="keyblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -2371,7 +2392,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
     <panel name="SourceRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="keyblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="keyblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -2392,7 +2413,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" font="Regular2;24" foregroundColor="PlatoonBKfg2" halign="left" position="42,80" render="Label" size="736,30" source="status" transparent="1" zPosition="1" />
     <widget backgroundColor="PlatoonBKbg" name="file_list" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,130" size="736,480" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
@@ -2448,9 +2469,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,510" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonyellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonyellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -2524,7 +2545,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" zPosition="2" position="42,80" size="736,390" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="Colorbuttons"/>
     <panel name="SourceRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <widget name="HelpWindow" position="42,490" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
@@ -2804,10 +2825,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="red" position="40,655" size="232,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="blue" position="790,655" size="300,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="red" position="40,655" size="232,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="blue" position="790,655" size="300,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="MenuOKExit"/>
   </screen>
 
@@ -2816,8 +2837,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
  	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <panel name="Title-big"/>
  	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-	<widget font="Regular;20" halign="left" valign="center" name="ok" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+	<widget font="Regular;20" halign="left" valign="center" name="ok" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
     <panel name="Exit"/>
   </screen>
@@ -3041,7 +3062,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -3108,16 +3129,16 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" source="job_progress" render="Progress" foregroundColor="PlatoonProgress" borderColor="PlatoonBorder" borderWidth="2" position="42,186" size="736,15" transparent="1" zPosition="2" />
     <widget backgroundColor="PlatoonBKbg" source="job_status" render="Label" foregroundColor="PlatoonBKfg1" font="Regular;22" position="42,230" size="736,27" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="config" position="42,280" size="736,120" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" font="Regular;22" scrollbarMode="showOnDemand" transparent="1" />
-    <widget backgroundColor="PlatoonGYbg" source="cancelable" render="FixedLabel" text="Cancel" foregroundColor="PlatoonButtonfg" font="Regular;20" position="40,655" size="220,26" halign="left" valign="center" zPosition="1" transparent="1">
+    <widget backgroundColor="PlatoonGYbg2" source="cancelable" render="FixedLabel" text="Cancel" foregroundColor="PlatoonButtonfg" font="Regular;20" position="40,655" size="220,26" halign="left" valign="center" zPosition="1" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="PlatoonGYbg" name="cancelable" render="FixedLabel" text="Cancel" foregroundColor="PlatoonButtonfg" font="Regular;20" position="40,655" size="220,26" halign="left" valign="center" zPosition="1" transparent="1">
+    <widget backgroundColor="PlatoonGYbg2" name="cancelable" render="FixedLabel" text="Cancel" foregroundColor="PlatoonButtonfg" font="Regular;20" position="40,655" size="220,26" halign="left" valign="center" zPosition="1" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="PlatoonGYbg" source="finished" render="FixedLabel" text="OK" foregroundColor="PlatoonButtonfg" font="Regular;20" position="290,655" size="220,26" halign="left" valign="center" zPosition="1" transparent="1">
+    <widget backgroundColor="PlatoonGYbg2" source="finished" render="FixedLabel" text="OK" foregroundColor="PlatoonButtonfg" font="Regular;20" position="290,655" size="220,26" halign="left" valign="center" zPosition="1" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="PlatoonGYbg" source="backgroundable" render="FixedLabel" text="Continue in background" foregroundColor="PlatoonButtonfg" font="Regular;20" position="790,655" size="230,26" halign="left" valign="center" zPosition="1" transparent="1">
+    <widget backgroundColor="PlatoonGYbg2" source="backgroundable" render="FixedLabel" text="Continue in background" foregroundColor="PlatoonButtonfg" font="Regular;20" position="790,655" size="230,26" halign="left" valign="center" zPosition="1" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
     <panel name="Title-big"/>
@@ -3143,8 +3164,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="label" position="42,560" size="736,54" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-	<widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+	<widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -3265,8 +3286,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
   	<panel name="menu_logo"/>
 	<panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="Exit"/>
   </screen>
 
@@ -3402,7 +3423,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
   	<panel name="menu_logo"/>
 	<panel name="Colorbuttons"/>
-	<widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+	<widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="OKExit"/>
   </screen>
 
@@ -3435,9 +3456,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
   	<panel name="menu_logo"/>
 	<panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="OKExit"/>
   </screen>
 
@@ -3466,7 +3487,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
   	<panel name="menu_logo"/>
 	<panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="OKExit"/>
   </screen>
 
@@ -3528,8 +3549,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
  	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
  	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" name="canceltext" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-	<widget font="Regular;20" halign="left" valign="center" name="oktext" position="290,655" size="240,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="canceltext" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+	<widget font="Regular;20" halign="left" valign="center" name="oktext" position="290,655" size="240,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="Colorbuttons"/>
 	<panel name="Exit"/>
   </screen>
@@ -3882,8 +3903,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<eLabel backgroundColor="PlatoonGYbg" text="Timer entry" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,390" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="HelpWindow" position="42,490" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
-    <widget font="Regular;20" halign="left" valign="center" name="canceltext" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="oktext" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="canceltext" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="oktext" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
     <panel name="OKExit"/>
@@ -3909,10 +3930,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <ePixmap pixmap="PlatoonHD/buttons/key_green1.png" position="370,347" size="200,5" alphatest="blend" />
     <ePixmap pixmap="PlatoonHD/buttons/key_yellow1.png" position="42,537" size="200,5" alphatest="blend" />
     <ePixmap pixmap="PlatoonHD/buttons/key_blue1.png" position="370,537" size="200,5" alphatest="blend" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="47,320" size="220,26" foregroundColor="PlatoonButtonfg" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_green" position="375,320" size="220,26" foregroundColor="PlatoonButtonfg" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="47,510" size="220,26" foregroundColor="PlatoonButtonfg" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="375,510" size="220,26" foregroundColor="PlatoonButtonfg" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="47,320" size="220,26" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_green" position="375,320" size="220,26" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="47,510" size="220,26" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="375,510" size="220,26" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
     <panel name="Title-big"/>
 	<panel name="menu_logo"/>
     <panel name="Exit"/>
@@ -4099,7 +4120,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="title-small"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -4226,9 +4247,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <ePixmap pixmap="PlatoonHD/global-icons/key_menu.png" position="42,543" size="43,22" alphatest="blend" />
     <eLabel text="Einstellungen" position="104,541" size="240,26" zPosition="1" font="Regular;20" foregroundColor="PlatoonBKfg1" halign="left" backgroundColor="PlatoonBKbg" transparent="1" />
     <panel name="Title-big"/>
-    <widget font="Regular;20" halign="left" valign="center" name="ButtonRedText" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="ButtonGreenText" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <eLabel text="Manage Cover" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="ButtonRedText" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="ButtonGreenText" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel text="Manage Cover" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Colorbuttons"/>
     <panel name="full_background"/>
     <panel name="MenuOKExit"/>
@@ -4278,13 +4299,13 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" name="movie_name" font="Regular;24" foregroundColor="PlatoonBKfg2" position="42,80" size="736,60" valign="top" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="movielist" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,146" size="736,420" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="resulttext" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="42,585" size="736,27" halign="center" transparent="1" />
-    <ePixmap pixmap="PlatoonHD/global-icons/key_epg.png" position="42,660" size="43,22" alphatest="blend" />
-    <widget name="movieinfo" position="95,659" size="148,24" font="Regular;17" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" halign="left" valign="top" />
-    <ePixmap pixmap="PlatoonHD/global-icons/key_ok.png" position="253,660" size="43,22" alphatest="blend" />
-    <widget name="save" position="306,659" size="148,24" font="Regular;17" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" halign="left" valign="top" />
-    <ePixmap pixmap="PlatoonHD/global-icons/key_menu.png" position="464,660" size="43,22" alphatest="blend" />
-    <widget name="setup" position="517,659" size="148,24" font="Regular;17" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" halign="left" valign="top" />
-    <ePixmap pixmap="PlatoonHD/global-icons/key_exit.png" position="675,660" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="PlatoonHD/icons-light/key_epg.png" position="42,660" size="43,22" alphatest="blend" />
+    <widget name="movieinfo" position="95,659" size="148,24" font="Regular;17" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" halign="left" valign="top" />
+    <ePixmap pixmap="PlatoonHD/icons-light/key_ok.png" position="253,660" size="43,22" alphatest="blend" />
+    <widget name="save" position="306,659" size="148,24" font="Regular;17" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" halign="left" valign="top" />
+    <ePixmap pixmap="PlatoonHD/icons-light/key_menu.png" position="464,660" size="43,22" alphatest="blend" />
+    <widget name="setup" position="517,659" size="148,24" font="Regular;17" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" halign="left" valign="top" />
+    <ePixmap pixmap="PlatoonHD/icons-light/key_exit.png" position="675,660" size="43,22" alphatest="blend" />
     <panel name="Title-big"/>
     <panel name="full_background"/>
     <panel name="MenuOKExit"/>
@@ -4438,7 +4459,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget name="gast_inactive" pixmap="PlatoonHD/buttons/grey.png" position="97,560" size="24,24" alphatest="blend" />
     <widget name="FBFGast" position="130,559" size="760,27" font="Regular;22" backgroundColor="PlatoonBKbg" transparent="1" foregroundColor="PlatoonBKfg1" />
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="240,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="240,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
     <panel name="full_background"/>
@@ -4474,33 +4495,33 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
 	<panel name="mediaplayer_background"/>
     <widget alphatest="blend" name="repeat" pixmaps="PlatoonHD/mmp/repeat_off.png,PlatoonHD/mmp/repeat_on.png" position="991,639" size="50,30" transparent="1" />
-	<widget backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1072,520" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	<widget backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1072,520" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	  <convert type="PlatoonHDClockToText">Format:%H</convert>
 	</widget>
-	<eLabel backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1129,520" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
-	<widget backgroundColor="PlatoonGYbg" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1139,520" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	<eLabel backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1129,520" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
+	<widget backgroundColor="PlatoonGYbg2" font="Regular;43" foregroundColor="PlatoonGYfg1" halign="center" position="1139,520" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	  <convert type="PlatoonHDClockToText">Format:%M</convert>
 	</widget>
-	<eLabel backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1195,534" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
-	<widget backgroundColor="PlatoonGYbg" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1204,534" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	<eLabel backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1195,534" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+	<widget backgroundColor="PlatoonGYbg2" font="Regular;32" foregroundColor="PlatoonGYfg1" halign="center" position="1204,534" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	  <convert type="PlatoonHDClockToText">Format:%S</convert>
 	</widget>
-	<widget backgroundColor="PlatoonGYbg" font="Regular;18" foregroundColor="PlatoonGYfg2" halign="center" position="1063,599" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	<widget backgroundColor="PlatoonGYbg2" font="Regular;18" foregroundColor="PlatoonGYfg2" halign="center" position="1063,599" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	  <convert type="PlatoonHDClockToText">Format:%e. %B</convert>
 	</widget>
-	<widget backgroundColor="PlatoonGYbg" font="Regular;18" foregroundColor="PlatoonGYfg2" halign="center" position="1063,579" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	<widget backgroundColor="PlatoonGYbg2" font="Regular;18" foregroundColor="PlatoonGYfg2" halign="center" position="1063,579" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	  <convert type="PlatoonHDClockToText">Format:%A</convert>
 	</widget>
-	<ePixmap pixmap="PlatoonHD/global-icons/key_menu.png" position="1092,652" size="43,22" alphatest="blend" />
-    <ePixmap pixmap="PlatoonHD/global-icons/key_ok.png" position="1142,652" size="43,22" alphatest="blend" />
-    <ePixmap pixmap="PlatoonHD/global-icons/key_exit.png" position="1192,652" size="43,22" alphatest="blend" />
+	<ePixmap pixmap="PlatoonHD/icons-light/key_menu.png" position="1092,650" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="PlatoonHD/icons-light/key_ok.png" position="1142,650" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="PlatoonHD/icons-light/key_exit.png" position="1192,650" size="43,22" alphatest="blend" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DirectoryBrowser" position="0,0" size="1280,720" title="Directorybrowser">
 	<!--*DirectoryBrowser*-->
     <widget backgroundColor="PlatoonBKbg" name="filelist" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" enableWrapAround="1" scrollbarMode="showOnDemand" size="736,540" transparent="1" zPosition="3" />
-    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
@@ -4510,8 +4531,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MediaPlayerSettings" position="0,0" size="1280,720" title="Edit Settings">
 	<!--*MediaPlayerSettings*-->
     <widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
-    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
@@ -4657,19 +4678,19 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="wbrFS_r_site15" position="900,0" size="380,640">
 	<!--*wbrFS_r_site15*-->
     <widget alphatest="blend" backgroundColor="PlatoonGYbg" name="picture" position="0,80" size="280,278" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile1b" position="0,380" size="280,22" transparent="1" noWrap="1" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile2b" position="0,402" size="280,22" transparent="1" noWrap="1" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile3b" position="0,424" size="280,22" transparent="1" noWrap="1" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile4b" position="0,446" size="280,22" transparent="1" noWrap="1" />
-    <widget alphatest="blend" backgroundColor="PlatoonGYbg" name="streamlogo" position="0,500" size="280,140" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular2;20" foregroundColor="PlatoonGYfg2" halign="center" name="fav_name" position="0,530" size="280,140" transparent="1" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile1b" position="0,380" size="280,22" transparent="1" noWrap="1" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile2b" position="0,402" size="280,22" transparent="1" noWrap="1" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile3b" position="0,424" size="280,22" transparent="1" noWrap="1" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular;18" foregroundColor="PlatoonGYfg1" halign="center" name="zeile4b" position="0,446" size="280,22" transparent="1" noWrap="1" />
+    <widget alphatest="blend" backgroundColor="PlatoonGYbg2" name="streamlogo" position="0,500" size="280,140" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular2;20" foregroundColor="PlatoonGYfg2" halign="center" name="fav_name" position="0,530" size="280,140" transparent="1" />
     <widget foregroundColor="PlatoonGYfg2" name="playline2" pointer="skin_default/position_pointer.png:540,0" position="0,510" size="280,21" transparent="1">
       <convert type="ServicePosition">Gauge</convert>
     </widget>
     <widget alphatest="blend" name="random" position="35,560" size="50,30" />
     <widget alphatest="blend" name="subdirs" position="115,560" size="50,30" />
     <widget alphatest="blend" name="auto" position="195,560" size="50,30" />
-	<ePixmap pixmap="PlatoonHD/graphics/webradio_background.png" position="0,0" size="380,640" zPosition="-10" alphatest="blend" />
+	<ePixmap pixmap="PlatoonHD/graphics/webradio_background.png" position="0,0" size="380,720" zPosition="-10" alphatest="blend" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebradioFSSetup_13" position="0,0" size="1280,720" title="webradioFS">
@@ -4721,8 +4742,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*webradioFSsetDisplay*-->
     <widget backgroundColor="PlatoonGYbg" name="titel" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,480" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
-    <widget font="Regular;20" halign="left" valign="center" name="label_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="label_green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="label_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="label_green" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
 	<ePixmap pixmap="PlatoonHD/graphics/menu_background.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" />
 	<eLabel backgroundColor="PlatoonBKbg" position="32,70" size="756,560" zPosition="-9" />
@@ -4752,7 +4773,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	  </convert>
 	</widget>
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
 	<ePixmap pixmap="PlatoonHD/graphics/menu_background.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" />
 	<eLabel backgroundColor="PlatoonBKbg" position="32,70" size="756,560" zPosition="-9" />
@@ -4783,10 +4804,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget name="pixmap" position="448,160" size="352,270" backgroundColor="PlatoonBKbg" />
     <eLabel backgroundColor="PlatoonBKbg" text="Playlist:" font="Regular2;24" foregroundColor="PlatoonBKfg2" position="932,80" size="288,30" halign="left" valign="center" zPosition="1" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="slist" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="932,130" size="288,480" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonyellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonyellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
     <panel name="full_background"/>
@@ -4799,8 +4820,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -4885,8 +4906,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget name="startdesc" position="42,200" size="736,40" valign="center" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
 	<widget name="helpdesc" position="42,260" size="736,40" valign="center" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="Exit"/>
   </screen>
@@ -4918,8 +4939,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
 	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,450" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="Colorbuttons"/>
-    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="OK" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="OK" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Exit"/>
   </screen>
@@ -5004,8 +5025,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	</widget>
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" render="Label" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" render="Label" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -5023,8 +5044,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="clevertankenMain" position="0,0" size="1280,720" title="Clever Tanken">
 	<!--*clevertankenMain*-->
 	<widget backgroundColor="PlatoonBKbg" name="menu" font="Regular;22" foregroundColor="PlatoonBKfg1" position="42,80" size="736,520" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <eLabel text="Switch PLZ" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Switch €/km" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Switch PLZ" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Switch €/km" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Title-big"/>
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
@@ -5043,8 +5064,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="tankenConfig" position="0,0" size="1280,720" title="clever-tanken.de Setup">
 	<!--*tankenConfig*-->
 	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <eLabel text="Abbrechen" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Speichern" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Abbrechen" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Speichern" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Title-big"/>
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
@@ -5080,9 +5101,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonGYbg" name="title" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,450" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" name="info_txt" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="42,540" size="736,54" valign="center" halign="center" zPosition="2" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonblue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
@@ -5320,7 +5341,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -5389,10 +5410,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_green1.png" position="309,682" size="200,5" />
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_yellow1.png" position="576,682" size="200,5" />
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_blue1.png" position="843,682" size="200,5" />
-    <widget font="Regular;20" halign="left" valign="top" name="key_red" position="40,655" size="254,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
-    <widget font="Regular;20" halign="left" valign="top" name="key_green" position="307,655" size="254,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
-    <widget font="Regular;20" halign="left" valign="top" name="key_yellow" position="574,655" size="254,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
-    <widget font="Regular;20" halign="left" valign="top" name="key_blue" position="841,655" size="254,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="2" noWrap="1"/>
+    <widget font="Regular;20" halign="left" valign="top" name="key_red" position="40,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
+    <widget font="Regular;20" halign="left" valign="top" name="key_green" position="307,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
+    <widget font="Regular;20" halign="left" valign="top" name="key_yellow" position="574,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
+    <widget font="Regular;20" halign="left" valign="top" name="key_blue" position="841,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="2" noWrap="1"/>
     <ePixmap pixmap="PlatoonHD/global-icons/key_menu.png" position="1145,660" size="43,22" alphatest="blend" />
     <ePixmap pixmap="PlatoonHD/global-icons/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
   </screen>
@@ -5444,7 +5465,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="scrolltext" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="42,514" size="736,81" halign="center" valign="center" transparent="1" />
     <panel name="Title-big"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
   </screen>
@@ -5513,7 +5534,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="cover" position="880,115" size="300,420" alphatest="blend" />
 	<widget backgroundColor="PlatoonBKbg" name="data" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="42,433" size="736,189" transparent="1" />
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="full_background"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
@@ -5527,7 +5548,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="cover" position="880,115" size="300,420" alphatest="blend" />
 	<widget backgroundColor="PlatoonBKbg" name="data" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="42,433" size="736,189" transparent="1" />
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="full_background"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
@@ -5551,9 +5572,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget name="Mlist" position="42,80" size="736,540" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" font="Regular;22" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -5604,8 +5625,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <eLabel position="845,208" size="2,211" backgroundColor="PlatoonBorder" />
     <eLabel position="1215,208" size="2,211" backgroundColor="PlatoonBorder" />
     <widget name="plugin" position="847,210" size="368,207" zPosition="1" backgroundColor="PlatoonBKbg" />
-    <widget font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="save" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="save" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Title-big"/>
     <panel name="full_background"/>
     <panel name="Colorbuttons"/>
@@ -5620,8 +5641,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <eLabel position="845,208" size="2,211" backgroundColor="PlatoonBorder" />
     <eLabel position="1215,208" size="2,211" backgroundColor="PlatoonBorder" />
     <widget name="plugin" position="847,210" size="368,207" zPosition="1" backgroundColor="PlatoonBKbg" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular;20" halign="left" valign="center" name="save" position="290,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular;20" halign="left" valign="center" name="cancel" position="40,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular;20" halign="left" valign="center" name="save" position="290,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Title-big"/>
     <panel name="full_background"/>
     <panel name="Colorbuttons"/>
@@ -5647,7 +5668,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="ratingtxt" font="Regular;22" foregroundColor="PlatoonBKfg1" position="1038,525" size="200,27" halign="right" valign="top" />
 	<widget name="starsbg" position="924,580" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/starsbar_empty_10.png" zPosition="3" alphatest="blend" />
 	<widget name="stars" position="924,580" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/starsbar_filled_10.png" zPosition="4" transparent="1" />
-    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	<panel name="full_background"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
@@ -5716,8 +5737,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*Execute*-->
     <panel name="Title-big"/>
     <widget backgroundColor="PlatoonBKbg" name="linelist" position="42,80" size="736,540" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
@@ -5729,8 +5750,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget name="ch2" position="800,160" zPosition="1" size="320,40" font="Regular;22" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" halign="center" valign="center" />
     <widget name="ch3" position="160,520" zPosition="1" size="320,40" font="Regular;22" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" halign="center" valign="center" />
     <widget name="ch4" position="800,520" zPosition="1" size="320,40" font="Regular;22" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" halign="center" valign="center" />
-    <widget name="text1" position="53,666" zPosition="2" size="533,40" font="Regular;22" foregroundColor="PlatoonGYfg1" backgroundColor="PlatoonGYbg" halign="center" valign="center" />
-    <widget name="text2" position="693,666" zPosition="2" size="533,40" font="Regular;22" foregroundColor="PlatoonGYfg1" backgroundColor="PlatoonGYbg" halign="center" valign="center" />
+    <widget name="text1" position="53,666" zPosition="2" size="533,40" font="Regular;22" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" halign="center" valign="center" />
+    <widget name="text2" position="693,666" zPosition="2" size="533,40" font="Regular;22" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" halign="center" valign="center" />
     <widget name="focus" position="0,0" zPosition="-1" size="640,360" backgroundColor="PlatoonBKbg" borderWidth="5" borderColor="PlatoonSelbg" />
   </screen>
 
@@ -5788,9 +5809,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" source="help" render="Label" position="42,416" size="736,189" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="left" valign="top" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <eLabel backgroundColor="PlatoonGYbg" font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <eLabel backgroundColor="PlatoonGYbg" font="Regular;20" halign="left" valign="center" text="Save" position="290,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget backgroundColor="PlatoonGYbg" font="Regular;20" halign="left" valign="center" source="archiveButton" render="Label" position="540,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="PlatoonGYbg2" font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="PlatoonGYbg2" font="Regular;20" halign="left" valign="center" text="Save" position="290,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget backgroundColor="PlatoonGYbg2" font="Regular;20" halign="left" valign="center" source="archiveButton" render="Label" position="540,655" size="220,26" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -5860,9 +5881,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" name="config" position="42,80" size="736,540" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonyellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="buttonyellow" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -5988,10 +6009,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*DreamExplorerII*-->
     <panel name="Title-big"/>
     <widget backgroundColor="PlatoonBKbg" name="filelist" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <eLabel text="delete" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Rename" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="verschieben/kopieren" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Bookmarks" position="790,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="delete" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Rename" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="verschieben/kopieren" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Bookmarks" position="790,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
@@ -6012,8 +6033,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <widget backgroundColor="PlatoonBKbg" name="File" font="Regular;22" foregroundColor="PlatoonBKfg1" position="42,80" size="736,135" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="CPto" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,240" size="736,330" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <eLabel text="Move" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Copy" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Move" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Copy" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
@@ -6089,7 +6110,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
 	<panel name="SourceRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -6152,7 +6173,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" name="config" position="42,80" size="736,540" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -6203,9 +6224,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" name="helpdesc" position="42,280" size="736,27" font="Regular2;22" valign="center" transparent="1" />
 	<panel name="Title-big"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_green" position="290,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="790,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
 	<panel name="OKExit"/>
   </screen>
@@ -6236,8 +6257,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
     <panel name="menu_logo"/>
-    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="Cancel" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -6280,7 +6301,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="menu_logo"/>
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -6320,7 +6341,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="menu_logo"/>
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -6331,7 +6352,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
     <panel name="NameRedGreen"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -6341,7 +6362,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="menu_logo"/>
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="key_red" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 
@@ -6389,9 +6410,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<eLabel backgroundColor="PlatoonBKbg" text="coded by svox, idea by arn354" position="42,575" size="736,27" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" zPosition="1" transparent="1"/>
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
-    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
-    <eLabel text="Download Picons" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Save" position="290,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <eLabel text="Download Picons" position="540,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="OKExit"/>
   </screen>
 
@@ -6412,10 +6433,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" name="msg" position="42,572" size="736,54" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" transparent="1" />
     <panel name="Title-big"/>
 	<panel name="menu_logo"/>
-    <widget font="Regular;20" halign="left" valign="center" name="k_r" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="k_g" position="290,655" size="240,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="k_y" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="k_b" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="k_r" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="k_g" position="290,655" size="240,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="k_y" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" name="k_b" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
   </screen>
@@ -6423,7 +6444,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*EMCSelection*-->
 	<eLabel backgroundColor="PlatoonGYbg" text="Enhanced Movie Center" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
-	<widget name="list" position="491,78" size="747,544" itemHeight="32" selectionPixmap="PlatoonHD/graphics/sel_32.png" CoolIconPos="4" CoolIconHPos="6" CoolIconSize="20,20" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolSelNumTxtWidth="30" CoolDateFont="Regular;23" CoolProgressPos="444" CoolBarPos="444" CoolBarHPos="9" CoolBarSize="50,10" CoolBarSizeSa="110,16" CoolPiconPos="35" CoolPiconHPos="4" CoolPiconWidth="40" CoolPiconHeight="24" CoolMoviePiconPos="86" CoolMoviePiconSize="343" CoolMoviePos="41" CoolMovieSize="388" CoolFolderSize="550" CoolDatePos="553" CoolDateWidth="187" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="PlatoonBKfg1" UnwatchedColor="#00ffffff" WatchingColor="#000050EF" FinishedColor="#0070AD11" RecordingColor="red" BackColorSel="PlatoonSelbg" FrontColorSel="PlatoonSelfg" backgroundColorSelected="PlatoonSelbg" foregroundColorSelected="PlatoonSelfg" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget name="list" position="491,78" size="747,544" itemHeight="32" selectionPixmap="PlatoonHD/graphics/sel_32.png" CoolIconPos="4" CoolIconHPos="6" CoolIconSize="32,20" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolSelNumTxtWidth="30" CoolDateFont="Regular;23" CoolProgressPos="444" CoolBarPos="444" CoolBarHPos="9" CoolBarSize="50,10" CoolBarSizeSa="110,16" CoolPiconPos="35" CoolPiconHPos="4" CoolPiconWidth="40" CoolPiconHeight="24" CoolMoviePiconPos="86" CoolMoviePiconSize="343" CoolMoviePos="41" CoolMovieSize="388" CoolFolderSize="550" CoolDatePos="555" CoolDateWidth="185" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="PlatoonBKfg1" UnwatchedColor="PlatoonBKfg1" WatchingColor="#000050EF" FinishedColor="#0070AD11" RecordingColor="red" BackColorSel="PlatoonSelbg" FrontColorSel="PlatoonSelfg" backgroundColorSelected="PlatoonSelbg" foregroundColorSelected="PlatoonSelfg" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget source="Service" render="Label" position="496,26" size="450,27" font="Regular;22" foregroundColor="PlatoonGYfg1" backgroundColor="PlatoonGYbg" transparent="1" noWrap="1" halign="left">
 	  <convert type="PlatoonHDDiskSpace">path</convert>
 	</widget>
@@ -6497,10 +6518,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" font="Regular;24" foregroundColor="PlatoonBKfg1" halign="left" position="822,80" render="PlatoonHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=4000,steptime=50,wrap=1,always=0,repeat=2,oneshot=1" size="416,540" source="Event" transparent="1">
 	  <convert type="PlatoonHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="top" source="key_green" render="Label" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" render="Label" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="top" source="key_green" render="Label" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" render="Label" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="full_background"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
@@ -6520,10 +6541,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" font="Regular;24" foregroundColor="PlatoonBKfg1" halign="left" position="822,80" render="PlatoonHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=4000,steptime=50,wrap=1,always=0,repeat=2,oneshot=1" size="416,540" source="Event" transparent="1">
 	  <convert type="PlatoonHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="top" source="key_green" render="Label" position="290,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" render="Label" position="540,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" render="Label" position="40,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="top" source="key_green" render="Label" position="290,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_yellow" render="Label" position="540,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_blue" render="Label" position="790,655" size="220,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="full_background"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
@@ -6592,7 +6613,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" font="Regular2;30" foregroundColor="PlatoonBKfg2" position="382,75" render="Label" size="480,40" source="Service" transparent="1" zPosition="3">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="PlatoonGYbg" name="date" position="382,120" font="Regular;24" foregroundColor="PlatoonGYfg2" size="120,30" halign="left" transparent="1" />
+    <widget backgroundColor="PlatoonBKYbg" name="date" position="382,120" font="Regular;24" foregroundColor="PlatoonBKfg2" size="120,30" halign="left" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" font="Regular;24" foregroundColor="PlatoonBKfg1" halign="right" position="502,120" render="Label" size="78,32" source="Event" transparent="1" zPosition="3">
       <convert type="PlatoonHDEventTime">StartTime</convert>
       <convert type="PlatoonHDClockToText">Format:%H:%M</convert>
@@ -6629,7 +6650,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget name="timeline4" pixmap="PlatoonHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget name="timeline5" pixmap="PlatoonHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget alphatest="on" name="timeline_now" pixmap="PlatoonHD/epg/timelineCooltv.jpg" position="0,100" size="3,360" zPosition="2" />
-    <widget backgroundColor="PlatoonGYbg" name="date" position="42,470" font="Regular;24" foregroundColor="PlatoonGYfg2" size="120,30" halign="left" transparent="1" />
+    <widget backgroundColor="PlatoonBKbg" name="date" position="42,470" font="Regular;24" foregroundColor="PlatoonBKfg2" size="120,30" halign="left" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" font="Regular;24" foregroundColor="PlatoonBKfg1" halign="right" position="162,470" render="Label" size="78,30" source="Event" transparent="1">
       <convert type="PlatoonHDEventTime">StartTime</convert>
       <convert type="PlatoonHDClockToText">Format:%H:%M</convert>
@@ -6794,7 +6815,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget name="timeline4" pixmap="PlatoonHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget name="timeline5" pixmap="PlatoonHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget alphatest="on" name="timeline_now" pixmap="PlatoonHD/epg/timelineCooltv.jpg" position="0,100" size="3,360" zPosition="2" />
-    <widget backgroundColor="PlatoonGYbg" name="date" position="42,470" font="Regular;24" foregroundColor="PlatoonGYfg2" size="120,30" halign="left" transparent="1" />
+    <widget backgroundColor="PlatoonBKbg" name="date" position="42,470" font="Regular;24" foregroundColor="PlatoonBKfg2" size="120,30" halign="left" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" font="Regular;24" foregroundColor="PlatoonBKfg1" halign="right" position="162,470" render="Label" size="78,30" source="Event" transparent="1">
       <convert type="PlatoonHDEventTime">StartTime</convert>
       <convert type="PlatoonHDClockToText">Format:%H:%M</convert>
@@ -6942,7 +6963,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="full_background"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Exit"/>
   </screen>
   <screen name="RadioEchoPlusAbout" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -6970,7 +6991,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <panel name="full_background"/>
     <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg" foregroundColor="PlatoonButtonfg" transparent="1" />
+    <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Exit"/>
   </screen>
   <screen name="RadioEchoPlusConfig" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -6982,6 +7003,25 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="SourceRedGreen"/>
     <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
+  </screen>
+  <screen name="PlatoonHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*PlatoonHD*-->
+	<widget backgroundColor="PlatoonGYbg" source="version" render="Label" font="Regular;24" foregroundColor="PlatoonGYfg1" position="414,24" size="800,30" halign="right" transparent="1" />
+	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="/usr/share/enigma2/PlatoonHD/graphics/sel_30.png" position="42,80" size="736,450" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+	<widget backgroundColor="PlatoonBKbg" name="helperimage" position="846,70" size="368,207" zPosition="1" />
+	<widget backgroundColor="PlatoonBKbg" source="Canvas" render="Canvas" position="846,70" size="368,207" zPosition="-1" />
+	<eLabel backgroundColor="PlatoonGYfg2" position="846,68" size="368,2" zPosition="2" />
+	<eLabel backgroundColor="PlatoonGYfg2" position="846,277" size="368,2" zPosition="2" />
+	<eLabel backgroundColor="PlatoonGYfg2" position="844,68" size="2,211" zPosition="2" />
+	<eLabel backgroundColor="PlatoonGYfg2" position="1212,68" size="2,211" zPosition="2" />
+	<widget backgroundColor="PlatoonBKbg" source="description" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="42,539" size="736,81" halign="center" valign="center" transparent="1" />
+	<ePixmap backgroundColor="PlatoonBKbg" pixmap="PlatoonHD/logo.png" position="902,330" size="256,256" alphatest="blend" />
+    <panel name="Title-big"/>
+    <panel name="SourceRedGreenYellow"/>
+    <panel name="Colorbuttons"/>
+    <panel name="OKExit"/>
+	<ePixmap pixmap="/usr/share/enigma2/PlatoonHD/graphics/menu_background.png" position="0,0" size="1280,720" zPosition="-9" alphatest="blend" />
+	<eLabel backgroundColor="PlatoonBKbg" position="32,70" size="756,560" zPosition="-9" />
   </screen>
 
 <!-- skin-end -->

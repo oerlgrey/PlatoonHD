@@ -67,5 +67,9 @@ class PlatoonHDTextTranslator(Converter, object):
 			return _('Movielist')
 		elif self.type == "secondinfobar":
 			return _('Second Infobar')
+		elif self.type == "screensaver":
+			return _('Screensaver')
+		elif self.type == "favorites":
+			return _('Favorites')
 
 	text = property(getText)

@@ -15,7 +15,7 @@
 #  Abbott Way, Stanford, California 94305, USA.
 #
 
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from Components.VariableText import VariableText
 from enigma import eLabel, eDVBVolumecontrol, eTimer
 
@@ -25,6 +25,7 @@ class PlatoonHDVolumeText(Renderer, VariableText):
 		VariableText.__init__(self)
 		self.vol_timer = eTimer()
 		self.vol_timer.callback.append(self.poll)
+
 	GUI_WIDGET = eLabel
 
 	def poll(self):

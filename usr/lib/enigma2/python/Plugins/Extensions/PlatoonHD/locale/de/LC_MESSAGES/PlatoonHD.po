@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: PlatoonHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 20:24+0200\n"
-"PO-Revision-Date: 2021-03-23 20:26+0100\n"
+"PO-Revision-Date: 2021-09-06 22:37+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: örlgrey\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: PlatoonHD.py
@@ -91,60 +91,127 @@ msgid "Choose the color of progress bars."
 msgstr "Wählen Sie die Farbe der Fortschrittsbalken."
 
 #: PlatoonHD.py
-msgid "red"
-msgstr "rot"
+msgid "Amber"
+msgstr "Bernstein"
 
 #: PlatoonHD.py
-msgid "dark red"
-msgstr "dunkelrot"
+msgid "Amber dark"
+msgstr "Dunkel Bernstein"
 
 #: PlatoonHD.py
-msgid "green"
-msgstr "grün"
+msgid "Black"
+msgstr "Schwarz"
 
 #: PlatoonHD.py
-msgid "dark green"
-msgstr "dunkelgrün"
+msgid "Blue"
+msgstr "Blau"
 
 #: PlatoonHD.py
-msgid "blue"
-msgstr "blau"
+msgid "Blue dark"
+msgstr "Dunkel Blau"
 
 #: PlatoonHD.py
-msgid "dark blue"
-msgstr "dunkelblau"
+msgid "Brown"
+msgstr "Braun"
 
 #: PlatoonHD.py
-msgid "orange"
-msgstr "orange"
+msgid "Brown dark"
+msgstr "Dunkel Braun"
 
 #: PlatoonHD.py
-msgid "white"
-msgstr "weiß"
+msgid "Cobalt"
+msgstr "Cobalt"
 
 #: PlatoonHD.py
-msgid "black"
-msgstr "schwarz"
+msgid "Cobalt dark"
+msgstr "Dunkel Cobalt"
 
 #: PlatoonHD.py
-msgid "yellow"
-msgstr "gelb"
+msgid "Cyan"
+msgstr "Cyan"
 
 #: PlatoonHD.py
-msgid "petrol"
-msgstr "petrol"
+msgid "Cyan dark"
+msgstr "Dunkel Cyan"
 
 #: PlatoonHD.py
-msgid "violet"
-msgstr "violett"
+msgid "Grey"
+msgstr "Grau"
 
 #: PlatoonHD.py
-msgid "grey"
-msgstr "grau"
+msgid "Grey dark"
+msgstr "Dunkel Grau"
 
 #: PlatoonHD.py
-msgid "dark grey"
-msgstr "dunkelgrau"
+msgid "Green"
+msgstr "Grün"
+
+#: PlatoonHD.py
+msgid "Green dark"
+msgstr "Dunkel Grün"
+
+#: PlatoonHD.py
+msgid "Olive"
+msgstr "Olive"
+
+#: PlatoonHD.py
+msgid "Olive dark"
+msgstr "Dunkel Olive"
+
+#: PlatoonHD.py
+msgid "Orange"
+msgstr "Orange"
+
+msgid "Orange dark"
+msgstr "Dunkel Orange"
+
+#: PlatoonHD.py
+msgid "Petrol"
+msgstr "Petrol"
+
+#: PlatoonHD.py
+msgid "Petrol dark"
+msgstr "Dunkel Petrol"
+
+#: PlatoonHD.py
+msgid "Pink"
+msgstr "Pink"
+
+#: PlatoonHD.py
+msgid "Pink dark"
+msgstr "Dunkel Pink"
+
+#: PlatoonHD.py
+msgid "Red"
+msgstr "Rot"
+
+#: PlatoonHD.py
+msgid "Red dark"
+msgstr "Dunkel Rot"
+
+#: PlatoonHD.py
+msgid "Steel"
+msgstr "Stahl"
+
+#: PlatoonHD.py
+msgid "Steel dark"
+msgstr "Dunkel Stahl"
+
+#: PlatoonHD.py
+msgid "Violet"
+msgstr "Violet"
+
+#: PlatoonHD.py
+msgid "Violet dark"
+msgstr "Dunkel Violet"
+
+#: PlatoonHD.py
+msgid "White"
+msgstr "Weiß"
+
+#: PlatoonHD.py
+msgid "Emerald"
+msgstr "Smaragdgrün"
 
 #: PlatoonHD.py
 msgid "low"
@@ -341,3 +408,11 @@ msgstr "Filmliste"
 #: PlatoonHDTextTranslator.py
 msgid "Second Infobar"
 msgstr "Zweite Infoleiste"
+
+#: PlatoonHDTextTranslator.py
+msgid "Screensaver"
+msgstr "Bildschirmschoner"
+
+#: PlatoonHDTextTranslator.py
+msgid "Favorites"
+msgstr "Favoriten"

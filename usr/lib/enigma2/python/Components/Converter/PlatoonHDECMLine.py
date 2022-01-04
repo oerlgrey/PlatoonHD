@@ -18,13 +18,13 @@
 from enigma import iServiceInformation, iPlayableService
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from Tools.Directories import fileExists
 
 if fileExists("/etc/enigma2/ci0.xml") or fileExists("/etc/enigma2/ci1.xml"):
-		CI = True
+	CI = True
 else:
-		CI = False
+	CI = False
 
 class PlatoonHDECMLine(Poll, Converter, object):
 
@@ -84,10 +84,10 @@ class PlatoonHDECMLine(Poll, Converter, object):
 			except:
 				
 				if CI:
-					ecmline = _("CI Modul")
+					ecmline = _('CI Modul')
 
 				else:
-					ecmline = ''
+					ecmline = _('waiting for information ...')
 	
 			else:
 				camInfo = {}
@@ -96,7 +96,7 @@ class PlatoonHDECMLine(Poll, Converter, object):
 					if len(r) > 1 :
 						camInfo[r[0].strip('\n\r\t ')] = r[1].strip('\n\r\t ')
 
-				caid = camInfo.get('caid','')
+				caid = camInfo.get('caid', '')
 				caid = caid.lstrip('0x')
 				caid = caid.upper()
 				caid = caid.zfill(4)
@@ -120,30 +120,30 @@ class PlatoonHDECMLine(Poll, Converter, object):
 				elif ((caid>='0100') and (caid<='01FF')):
 					system = 'System: SECA'
 				else:
-					system = _("System: unknown")
+					system = _('System: unknown')
 
 				caid = 'CAID: ' + str(caid)
 
-				prov = camInfo.get('prov','')
+				prov = camInfo.get('prov', '')
 				prov = prov.lstrip("0x")
 				prov = prov.upper()
 				prov = prov.zfill(6)
 				prov = 'Provider: ' + prov
 
-				ecmtime = camInfo.get('ecm time','')
+				ecmtime = camInfo.get('ecm time', '')
 				if ecmtime:
 					if "msec" in ecmtime:
 						ecmtime = 'ECM: ' + ecmtime
 					else:
 						ecmtime = 'ECM: ' + ecmtime + ' s'
 
-				hops = 'Hops: ' + str(camInfo.get('hops',''))
-				address = 'Server: ' + str(camInfo.get('address',''))
-				reader = 'Reader: ' + str(camInfo.get('reader',''))
-				source = 'Source: ' + str(camInfo.get('source',''))
-				decode =  'Decode: ' + str(camInfo.get('decode',''))
+				hops = 'Hops: ' + str(camInfo.get('hops', ''))
+				address = 'Server: ' + str(camInfo.get('address', ''))
+				reader = 'Reader: ' + str(camInfo.get('reader', ''))
+				source = 'Source: ' + str(camInfo.get('source', ''))
+				decode = 'Decode: ' + str(camInfo.get('decode', ''))
 
-				using = str(camInfo.get('using',''))
+				using = str(camInfo.get('using', ''))
 
 				active = ''
 
@@ -153,7 +153,7 @@ class PlatoonHDECMLine(Poll, Converter, object):
 
 				elif using == 'emu':
 					active = 'EMU'
-					if self.type in (self.SATINFO,self.VERYSHORTCAID,self.VERYSHORTREADER):
+					if self.type in (self.SATINFO, self.VERYSHORTCAID, self.VERYSHORTREADER):
 						ecmline = caid + ', ' + ecmtime
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + ecmtime
@@ -227,14 +227,14 @@ class PlatoonHDECMLine(Poll, Converter, object):
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + source + ' - ' + prov + ' - ' + ecmtime
 
 				else:
-					active = _("unknown")
-					ecmline = _("no information available")
+					active = _('unknown')
+					ecmline = _('no information available')
 
 		else:
 			if self.invisible == self.FTAINVISIBLE:
 				ecmline = ''
 			else:
-				ecmline = _("free to air")
+				ecmline = _('free to air')
 
 		return ecmline
 
