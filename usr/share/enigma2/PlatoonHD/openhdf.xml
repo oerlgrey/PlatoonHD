@@ -258,6 +258,10 @@
 	<parameter name="HelpMenuListExtHlp0" value="6,1,726,27"/>
 	<parameter name="HelpMenuListExtHlp1" value="6,28,726,22"/>
 	<parameter name="HelpMenuListHlp" value="6,1,726,27"/>
+	<!-- HDFRadio -->
+	<parameter name="HDFRadioDirFont" value="Regular;22" />
+	<parameter name="HDFRadioDirPixmap" value="3,5,20,20" />
+	<parameter name="HDFRadioDirectory" value="33,0,494,30" />
   </parameters>
   <fonts>
 	<alias name="FileList" font="Regular" size="22" height="30" />
@@ -8037,7 +8041,6 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen name="HDFRadioScreenSaver" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*HDFRadioScreenSaver*-->
 	<widget backgroundColor="#00000000" name="cover" position="146,80" size="300,300" zPosition="1" />
-	<widget backgroundColor="#ffffffff" name="video" position="0,0" size="1280,720" zPosition="2" />
 	<widget backgroundColor="#00000000" source="recording" render="Label" font="Regular;24" foregroundColor="#00ff0000" position="40,24" size="1200,30" halign="center" valign="center" transparent="1" />
 	<widget backgroundColor="#00000000" source="songtitle" render="Label" font="Regular;30" foregroundColor="#00ffffff" position="40,650" size="1200,50" noWrap="1" halign="center" valign="center" transparent="1" />
 	<eLabel backgroundColor="#00000000" position="0,0" size="1280,720" transparent="0" zPosition="-1" />
@@ -8126,12 +8129,28 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="recorddirs" font="Regular;22" foregroundColor="PlatoonBKfg1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" name="localdirs" font="Regular;22" foregroundColor="PlatoonBKfg1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" name="ownlist" font="Regular;22" foregroundColor="PlatoonBKfg1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
-	<widget backgroundColor="transparent" name="video" position="822,390" size="416,234" zPosition="2" />
     <panel name="Title-big"/>
     <panel name="SourceRedGreenYellowBlue"/>
     <panel name="full_background"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
+  </screen>
+
+  <screen name="HDFRadioEditPlaylist" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioEditPlaylist*-->
+    <widget backgroundColor="PlatoonGYbg" source="global.CurrentTime" render="Label" foregroundColor="PlatoonGYfg1" font="Regular;24" position="1138,24" size="100,30" halign="right" transparent="1">
+      <convert type="PlatoonHDClockToText">Default</convert>
+    </widget>
+	<widget backgroundColor="PlatoonBKbg" name="directoriesname" font="Regular2;27" foregroundColor="PlatoonBKfg2" position="42,72" size="581,36" transparent="1"/>
+	<widget backgroundColor="PlatoonBKbg" name="ownlist" font="Regular;22" foregroundColor="PlatoonBKfg1" position="42,114" size="581,390" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+    <widget backgroundColor="PlatoonBKbg" name="playlistname" font="Regular2;27" foregroundColor="PlatoonBKfg2" position="665,72" size="573,36" transparent="1"/>
+	<widget backgroundColor="PlatoonBKbg" name="playlist" font="Regular;22" foregroundColor="PlatoonBKfg1" position="665,114" size="573,510" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="PlatoonBKbg" source="instruction" render="Label" font="Regular2;21" foregroundColor="PlatoonBKfg2" position="42,516" size="581,104" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big"/>
+    <panel name="full_background"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="Colorbuttons"/>
+    <panel name="OKExit"/>
   </screen>
 
 <!-- skin-end -->
