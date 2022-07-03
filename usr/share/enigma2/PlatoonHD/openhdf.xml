@@ -5346,11 +5346,11 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" source="entries" render="Listbox" position="42,135" size="736,480" selectionPixmap="PlatoonHD/graphics/sel_60.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
-					 MultiContentEntryText(pos = (32,31),size = (133,27),flags = RT_HALIGN_LEFT, text = 1),# index 0 is the MenuText
-					 MultiContentEntryPixmapAlphaTest(pos = (8,22),size = (16,16),png = 2),# index 1 is direction pixmap
-					 MultiContentEntryText(pos = (32,1),size = (696,27),flags = RT_HALIGN_LEFT, text = 3),# index 2 is remote name/number
-					 MultiContentEntryText(pos = (175,31),size = (67,27),flags = RT_HALIGN_LEFT, text = 4),# index 3 is length of call
-					 MultiContentEntryText(pos = (242,31),size = (486,27),flags = RT_HALIGN_RIGHT, text = 5),# index 4 is my number/name for number
+					 MultiContentEntryText(pos = (40,31),size = (133,27),flags = RT_HALIGN_LEFT, text = 1),# index 0 is the MenuText
+					 MultiContentEntryPixmapAlphaTest(pos = (5,22),size = (35,35),png = 2),# index 1 is direction pixmap
+					 MultiContentEntryText(pos = (40,1),size = (690,27),flags = RT_HALIGN_LEFT, text = 3),# index 2 is remote name/number
+					 MultiContentEntryText(pos = (180,31),size = (67,27),flags = RT_HALIGN_LEFT, text = 4),# index 3 is length of call
+					 MultiContentEntryText(pos = (250,31),size = (480,27),flags = RT_HALIGN_RIGHT, text = 5),# index 4 is my number/name for number
 					],
 					 "fonts": [gFont("Regular",22)],
 					 "itemHeight": 60
@@ -5377,6 +5377,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 					}
 	  </convert>
     </widget>
+	<widget name="HelpWindow" position="42,490" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="menu_logo"/>
@@ -8005,6 +8006,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" source="listversion" render="Label" font="Regular2;24" foregroundColor="PlatoonBKfg2" position="687,84" size="551,32" valign="top" noWrap="1" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" name="stations" font="Regular;22" foregroundColor="PlatoonBKfg1" position="680,133" size="558,480" selectionPixmap="PlatoonHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" name="favorites" font="Regular;22" foregroundColor="PlatoonBKfg1" position="680,133" size="558,480" selectionPixmap="PlatoonHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="PlatoonBKbg" name="quickmenu" font="Regular;22" foregroundColor="PlatoonBKfg1" position="680,133" size="558,480" selectionPixmap="PlatoonHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
     <panel name="Title-big"/>
     <panel name="SourceRedGreenYellowBlue"/>
     <panel name="full_background"/>
@@ -8124,6 +8126,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" name="year" font="Regular;24" foregroundColor="PlatoonBKfg1" position="182,308" size="720,30" noWrap="1" valign="top" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" name="playlistname" font="Regular2;24" foregroundColor="PlatoonBKfg2" position="42,220" size="622,30" valign="center" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" name="playlist" font="Regular;22" foregroundColor="PlatoonBKfg1" position="42,254" size="622,360" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="PlatoonBKbg" name="quickmenu" font="Regular;22" foregroundColor="PlatoonBKfg1" position="42,224" size="622,390" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" name="cover" position="938,80" size="300,300" />
 	<widget backgroundColor="PlatoonBKbg" name="directoriesname" font="Regular2;24" foregroundColor="PlatoonBKfg2" position="700,370" size="210,30" valign="center" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" name="recorddirs" font="Regular;22" foregroundColor="PlatoonBKfg1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
