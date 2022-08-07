@@ -35,12 +35,6 @@ fi
 if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyo
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDTextTranslator.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDTextTranslator.pyo
-fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDWeather.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDWeather.pyo
-fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDDolbyIcon.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDDolbyIcon.pyo
 fi
@@ -64,28 +58,4 @@ if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyo ]
 fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyo
-fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDWetterPicon.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDWetterPicon.pyo
-fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/__init__.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/__init__.pyo
-fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/PlatoonHD.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/PlatoonHD.pyo
-fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/ping.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/ping.pyo
-fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyo
-fi
-if [ -f /usr/share/enigma2/PlatoonHD/skin.xml ]; then
-    cp /usr/share/enigma2/PlatoonHD/skin.xml /tmp/platoonhd-skin.xml
-fi
-if [ -d /tmp/platoonhd-graphics ]; then
-    cp -f /usr/share/enigma2/PlatoonHD/graphics/* /tmp/platoonhd-graphics/
-else
-    mkdir /tmp/platoonhd-graphics
-    cp /usr/share/enigma2/PlatoonHD/graphics/* /tmp/platoonhd-graphics/
 fi

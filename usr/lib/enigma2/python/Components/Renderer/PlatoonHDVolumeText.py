@@ -3,7 +3,7 @@
 #
 #  VOLUME TO TEXT Converter
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #  Thankfully inspired by fromhell555
 #

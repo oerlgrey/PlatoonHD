@@ -1,7 +1,7 @@
 <skin>
   <copyright>
     <!-- DONT REMOVE THIS DISCLAIMER -->
-    <!-- PlatoonHD by örlgrey -->
+    <!-- PlatoonHD by oerlgrey -->
     <!-- Icons by stony272 -->
     <!-- You can change this skin for PERSONAL USE ONLY -->
     <!-- You are not allowed to publish our skin without our permission -->
@@ -21,12 +21,12 @@
     <color name="PlatoonSelfg" value="#00FFFFFF" />
     <color name="PlatoonMarkedfg" value="#0070AD11" />
     <color name="background" value="#1700002F" />
-    <color name="PlatoonGYbg" value="#113A3A3A" />
-    <color name="PlatoonGYbg2" value="#113A3A3A" />
+    <color name="PlatoonGYbg" value="#113F3F3F" />
+    <color name="PlatoonGYbg2" value="#11272727" />
     <color name="PlatoonBKbg" value="#1700002F" />
-    <color name="PlatoonSelbg" value="#0086350D" />
+    <color name="PlatoonSelbg" value="#00892E13" />
     <color name="PlatoonLine" value="#00FFFFFF" />
-    <color name="PlatoonProgress" value="#00FF4B05" />
+    <color name="PlatoonProgress" value="#00C3461B" />
     <color name="PlatoonBorder" value="#00FFFFFF" />
     <color name="selectedFG" value="#00ffffff" />
     <color name="orange" value="#00dc5221" />
@@ -324,36 +324,6 @@
 	  </widget>
 	  <widget backgroundColor="PlatoonGYbg2" font="Regular;22" foregroundColor="PlatoonGYfg1" halign="center" position="928,492" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	    <convert type="PlatoonHDClockToText">Format:%e. %B</convert>
-	  </widget>
-	</screen>
-	
-	<screen name="menu_weather">
-	  <widget source="global.CurrentTime" render="Label" position="822,24" size="416,30" foregroundColor="PlatoonGYfg1" font="Regular;24" halign="center" backgroundColor="PlatoonGYbg" transparent="1" valign="center">
-        <convert type="PlatoonHDClockToText">Format:%A, %e. %B, %H:%M</convert>
-      </widget>
-	  <widget source="session.CurrentService" position="862,337" transparent="1" zPosition="8" size="105,105" render="PlatoonHDWetterPicon" alphatest="blend" path="WetterIcons">
-		<convert  type="PlatoonHDWeather">icon_cur</convert>
-	  </widget>
-	  <widget source="session.CurrentService" render="Label" position="968,366" size="150,49" font="Regular2;38" foregroundColor="PlatoonGYfg2" backgroundColor="PlatoonGYbg2" noWrap="1" halign="center" transparent="1" zPosition="3">
-		<convert type="PlatoonHDWeather">temp_cur</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;26" foregroundColor="PlatoonGYfg1" render="Label" position="1118,351" size="100,33" source="session.CurrentService" zPosition="8" transparent="1">
-		<convert type="PlatoonHDWeather">high0</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;26" foregroundColor="PlatoonGYfg1" render="Label" position="1118,397" size="100,33" source="session.CurrentService" zPosition="8" transparent="1">
-		<convert type="PlatoonHDWeather">low0</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,461" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
-		<convert type="PlatoonHDWeather">city</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,496" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
-		<convert type="PlatoonHDWeather">wind</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,531" size="336,30" source="session.CurrentService" zPosition="3" halign="center" transparent="1">
-		<convert type="PlatoonHDWeather">humidity</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonGYbg2" font="Regular;24" foregroundColor="PlatoonGYfg1" render="Label" position="862,566" size="336,60" source="session.CurrentService" noWrap="1" transparent="1" zPosition="8" halign="center" valign="top" >
-		<convert type="PlatoonHDWeather">text_cur</convert>
 	  </widget>
 	</screen>
 	
@@ -845,56 +815,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 		<convert type="PlatoonHDServiceName2">%n - %N</convert>
 	  </widget>
 	</screen>
-	
-	<screen name="infobar-weather">
-	  <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" position="277,33" transparent="1" zPosition="8" size="50,50" render="PlatoonHDWetterPicon" alphatest="blend" path="WetterIcons">
-		<convert type="PlatoonHDWeather">icon_cur</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonBKbg" font="Regular2;20" foregroundColor="PlatoonBKfg2" render="Label" position="350,35" size="36,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1" noWrap="1">
-		<convert type="PlatoonHDWeather">shortday0</convert>
-	  </widget>
-	  <widget source="session.CurrentService" render="Label" position="386,35" size="55,26" font="Regular;20" halign="left" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" noWrap="1" transparent="1" zPosition="3">
-		<convert type="PlatoonHDWeather">temp_cur</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonBKbg" font="Regular;20" foregroundColor="PlatoonBKfg1" render="Label" position="350,62" size="100,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
-		<convert type="PlatoonHDWeather">minmax0</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" position="467,33" transparent="1" zPosition="8" size="50,50" render="PlatoonHDWetterPicon" alphatest="blend" path="WetterIcons">
-		<convert type="PlatoonHDWeather">icon1</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonBKbg" font="Regular2;20" foregroundColor="PlatoonBKfg2" render="Label" position="540,35" size="40,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1" noWrap="1">
-		<convert type="PlatoonHDWeather">shortday1</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonBKbg" font="Regular;20" foregroundColor="PlatoonBKfg1" render="Label" position="540,62" size="100,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
-		<convert type="PlatoonHDWeather">minmax1</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" position="657,33" transparent="1" zPosition="8" size="50,50" render="PlatoonHDWetterPicon" alphatest="blend" path="WetterIcons">
-		<convert type="PlatoonHDWeather">icon2</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonBKbg" font="Regular2;20" foregroundColor="PlatoonBKfg2" render="Label" position="730,35" size="40,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1" noWrap="1">
-		<convert type="PlatoonHDWeather">shortday2</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonBKbg" font="Regular;20" foregroundColor="PlatoonBKfg1" render="Label" position="730,62" size="100,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
-		<convert type="PlatoonHDWeather">minmax2</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" position="847,33" transparent="1" zPosition="8" size="50,50" render="PlatoonHDWetterPicon" alphatest="blend" path="WetterIcons">
-		<convert type="PlatoonHDWeather">icon3</convert>
-	  </widget>
-	  <widget backgroundColor="PlatoonBKbg" font="Regular2;20" foregroundColor="PlatoonBKfg2" render="Label" position="920,35" size="40,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1" noWrap="1">
-		<convert type="PlatoonHDWeather">shortday3</convert>
-	  </widget>
-	  <widget noWrap="1" backgroundColor="PlatoonBKbg" font="Regular;20" foregroundColor="PlatoonBKfg1" render="Label" position="920,62" size="100,26" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
-		<convert type="PlatoonHDWeather">minmax3</convert>
-	  </widget>
-      <ePixmap pixmap="PlatoonHD/graphics/shift_background.png" position="217,10" size="845,106" zPosition="-10" alphatest="blend" />
-	  <eLabel backgroundColor="PlatoonBKbg" position="237,30" size="805,66" zPosition="-9" />
-	</screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
     <!--*ChannelSelection*-->
-    <widget backgroundColor="PlatoonGYbg" source="session.CurrentService" render="Label" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">channellist</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonGYbg" text="Kanalliste" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonGYbg" source="Title" render="Label" font="Regular;24" foregroundColor="PlatoonGYfg1" position="660,24" size="578,30" halign="right" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" scrollbarMode="showOnDemand" colorEventProgressbar="PlatoonProgress" colorEventProgressbarSelected="PlatoonProgress" foregroundColorMarkedSelected="green" foregroundColor="PlatoonBKfg1" colorEventProgressbarBorder="PlatoonBorder" colorEventProgressbarBorderSelected="PlatoonSelfg" colorServiceDescription="PlatoonBKfg2" colorServiceDescriptionSelected="PlatoonSelfg" colorServiceRecording="red" foregroundColorServiceNotAvail="PlatoonNAfg" name="list" position="500,70" serviceInfoFont="Regular;23" serviceItemHeight="35" selectionPixmap="PlatoonHD/graphics/sel_70.png" serviceNameFont="Regular;25" serviceNumberFont="Regular;25" size="738,560" transparent="1" />
     <widget font="Regular2;26" foregroundColor="PlatoonBKfg2" position="42,75" halign="left" render="Label" size="416,66" source="ServiceEvent" backgroundColor="PlatoonBKbg" transparent="1" valign="top">
@@ -929,14 +853,11 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="infobar-channelname"/>
 	<panel name="infobar_background"/>
 	<panel name="infobar-clock"/>
-	<!-- infobar weather -->
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">
 	<!--*SecondInfoBar*-->
-    <widget backgroundColor="PlatoonGYbg" source="session.CurrentService" render="Label" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">secondinfobar</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonGYbg" text="Zweite Infoleiste" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" font="Regular2;26" foregroundColor="PlatoonBKfg1" position="42,74" size="698,33" render="Label" source="session.CurrentService" valign="center" transparent="1">
 	  <convert type="ServiceName">Name</convert>
 	</widget>
@@ -946,9 +867,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="PlatoonBKbg" font="Regular;23" foregroundColor="PlatoonBKfg1" position="42,175" size="698,348" render="PlatoonHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=4000,steptime=50,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1">
 	  <convert type="PlatoonHDEventName">BothDescriptionsFiltered</convert>
 	</widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;26" foregroundColor="PlatoonBKfg2" position="780,74" size="460,33" valign="top" transparent="1">
-      <convert type="PlatoonHDTextTranslator">itfollows</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="es folgt:" font="Regular2;26" foregroundColor="PlatoonBKfg2" position="780,74" size="460,33" valign="top" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" font="Regular2;24" foregroundColor="PlatoonBKfg2" position="780,111" size="460,60" render="Label" source="session.Event_Next" valign="top" transparent="1">
 	  <convert type="PlatoonHDEventName">Name</convert>
 	</widget>
@@ -2703,9 +2622,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget position="217,628" render="Progress" size="801,5" source="session.CurrentService" foregroundColor="PlatoonProgress" zPosition="3" transparent="1">
 	  <convert type="ServicePosition">Position</convert>
 	</widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;20" foregroundColor="PlatoonBKfg1" position="842,644" size="120,24" halign="right" transparent="1">
-      <convert type="PlatoonHDTextTranslator">runsuntil</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="läuft bis " font="Regular;20" foregroundColor="PlatoonBKfg1" position="842,644" size="120,24" halign="right" transparent="1" />
 	<widget source="session.CurrentService" render="Label" position="963,644" size="55,24" font="Regular;20" halign="right" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" text="13:45" foregroundColor="PlatoonBKfg1">
 	  <convert type="PlatoonHDServiceEndTime">EndTime</convert>
 	</widget>
@@ -2773,9 +2690,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget position="217,628" render="Progress" size="801,5" source="session.CurrentService" foregroundColor="PlatoonProgress" zPosition="3" transparent="1">
 	  <convert type="ServicePosition">Position</convert>
 	</widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;20" foregroundColor="PlatoonBKfg1" position="842,644" size="120,24" halign="right" transparent="1">
-      <convert type="PlatoonHDTextTranslator">runsuntil</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="läuft bis " font="Regular;20" foregroundColor="PlatoonBKfg1" position="842,644" size="120,24" halign="right" transparent="1" />
 	<widget source="session.CurrentService" render="Label" position="963,644" size="55,24" font="Regular;20" halign="right" backgroundColor="PlatoonBKbg" transparent="1" zPosition="1" text="13:45" foregroundColor="PlatoonBKfg1">
 	  <convert type="PlatoonHDServiceEndTime">EndTime</convert>
 	</widget>
@@ -3504,20 +3419,15 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="OKExit"/>
   </screen>
 
-  <screen name="VirtualKeyBoard" position="0,0" backgroundColor="transparent" title="Virtual KeyBoard" flags="wfNoBorder" size="1280,720" zPosition="98">
-	<!--*VirtualKeyBoard*-->
-	<ePixmap pixmap="PlatoonHD/backg.png" position="0,0" size="1280,720" zPosition="-10" />
-	<ePixmap pixmap="PlatoonHD/graphics/virtualkeyboard_background.png" position="301,139" size="678,442" zPosition="-9" alphatest="blend" />
-	<eLabel backgroundColor="PlatoonBKbg" position="315,187" size="650,374" zPosition="-8" />
-	<widget backgroundColor="PlatoonGYbg" source="Title" render="Label" position="325,148" size="630,30" font="Regular2;24" foregroundColor="PlatoonGYfg2" transparent="1" noWrap="1" />
-    <widget backgroundColor="PlatoonBKbg" name="prompt" conditional="prompt" position="325,193" size="630,27" font="Regular;22" foregroundColor="PlatoonBKfg1" transparent="1" noWrap="1" />
-    <eLabel backgroundColor="PlatoonBorder" position="325,230" size="630,2" zPosition="-1" />
-    <eLabel backgroundColor="PlatoonBorder" position="325,268" size="630,2" zPosition="-1" />
-    <eLabel backgroundColor="PlatoonBorder" position="325,230" size="2,40" zPosition="-1" />
-    <eLabel backgroundColor="PlatoonBorder" position="953,230" size="2,40" zPosition="-1" />
-    <widget backgroundColor="PlatoonBKbg" name="text" position="327,232" size="626,35" font="Regular;28" foregroundColor="PlatoonBKfg1" valign="center" noWrap="1" transparent="1" />
-    <widget backgroundColor="#001E1E1E" name="list" position="325,279" size="630,225" selectionDisabled="1" foregroundColor="white" transparent="1" />
-    <widget backgroundColor="PlatoonBKbg" name="locale" conditional="locale" position="325,519" size="630,27" font="Regular;22" foregroundColor="PlatoonBKfg1" transparent="1" noWrap="1" />
+  <screen name="VirtualKeyBoard" position="center,187" backgroundColor="PlatoonBKbg" title="Virtual KeyBoard" flags="wfBorder" size="650,374" zPosition="98">
+    <widget backgroundColor="PlatoonBKbg" name="prompt" conditional="prompt" position="10,6" size="630,27" font="Regular;22" foregroundColor="PlatoonBKfg1" transparent="1" noWrap="1" />
+    <eLabel backgroundColor="PlatoonBorder" position="10,43" size="630,2" zPosition="-1" />
+    <eLabel backgroundColor="PlatoonBorder" position="10,81" size="630,2" zPosition="-1" />
+    <eLabel backgroundColor="PlatoonBorder" position="10,43" size="2,40" zPosition="-1" />
+    <eLabel backgroundColor="PlatoonBorder" position="638,43" size="2,40" zPosition="-1" />
+    <widget backgroundColor="PlatoonBKbg" name="text" position="12,45" size="626,35" font="Regular;28" foregroundColor="PlatoonBKfg1" valign="center" noWrap="1" transparent="1" />
+    <widget backgroundColor="#001E1E1E" name="list" position="10,92" size="630,225" selectionDisabled="1" foregroundColor="white" transparent="1" />
+    <widget backgroundColor="PlatoonBKbg" name="locale" conditional="locale" position="10,332" size="630,27" font="Regular;22" foregroundColor="PlatoonBKfg1" transparent="1" noWrap="1" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Console" position="0,0" size="1280,720" title="Command execution...">
@@ -4040,17 +3950,13 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget source="session.CurrentService" render="Label" position="648,32" size="100,30" font="Regular;24" halign="right" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="PlatoonBKfg1" position="561,32" size="100,30" valign="top" zPosition="15" transparent="1">
-      <convert type="PlatoonHDTextTranslator">untillive</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="bis live:" font="Regular;24" foregroundColor="PlatoonBKfg1" position="561,32" size="100,30" valign="top" zPosition="15" transparent="1" />
     <eLabel text="min " position="755,32" size="50,30" font="Regular;24" foregroundColor="PlatoonBKfg1" halign="left" backgroundColor="PlatoonBKbg" transparent="1" zPosition="15" valign="top" />
     <widget source="session.CurrentService" render="Label" position="147,32" size="100,30" font="Regular; 24" halign="right" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Length</convert>
     </widget>
     <eLabel text="min " position="255,32" size="60,30" font="Regular;24" halign="left" backgroundColor="PlatoonBKbg" transparent="1" zPosition="15" valign="top" foregroundColor="PlatoonBKfg1" />
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular;28" foregroundColor="red" position="318,28" size="230,32" halign="center" valign="center" zPosition="10" transparent="1">
-      <convert type="PlatoonHDTextTranslator">timeshiftactive</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="timeshift aktiv" font="Regular;28" foregroundColor="red" position="318,28" size="230,32" halign="center" valign="center" zPosition="10" transparent="1" />
 	<eLabel position="48,70" size="749,1" backgroundColor="PlatoonLine" zPosition="2" />
     <widget position="48,68" render="Progress" size="749,5" source="session.CurrentService" foregroundColor="PlatoonProgress" zPosition="3" transparent="1">
       <convert type="ServicePosition">Position</convert>
@@ -6068,15 +5974,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BirthdayReminder" position="0,0" size="1280,720" title=" " >
 	<!--*BirthdayReminder*-->
 	<eLabel backgroundColor="PlatoonGYbg" text="Birthday Reminder" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="58,80" size="414,27" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">name</convert>
-    </widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="492,80" size="184,27" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">birthday</convert>
-    </widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="682,80" size="90,27" halign="right" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">age</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="Name" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="58,80" size="414,27" valign="center" transparent="1" />
+    <eLabel backgroundColor="PlatoonBKbg" text="Geburtstag" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="492,80" size="184,27" valign="center" transparent="1" />
+    <eLabel backgroundColor="PlatoonBKbg" text="Alter" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="682,80" size="90,27" halign="right" valign="center" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" source="list" render="Listbox" position="42,110" size="736,510" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
@@ -6108,9 +6008,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BirthdayReminderSettings" position="0,0" size="1280,720" title=" " >
 	<!--*BirthdayReminderSettings*-->
-    <widget backgroundColor="PlatoonGYbg" source="session.CurrentService" render="Label" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">brsettings</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonGYbg" text="Birthday Reminder Einstellungen" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="config" position="42,80" size="736,540" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
@@ -6121,9 +6019,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PathSelectionScreen" position="0,0" size="1280,720" title=" " >
 	<!--*PathSelectionScreen*-->
-    <widget backgroundColor="PlatoonGYbg" source="session.CurrentService" render="Label" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">brpath</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonGYbg" text="Wähle den Pfad für die Geburtstagsdatei" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="target" position="42,80" size="736,27" font="Regular2;22" foregroundColor="PlatoonBKfg2" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="filelist" position="42,110" size="736,510" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
 	<panel name="menu_logo"/>
@@ -6864,9 +6760,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="PlatoonBKbg" font="Regular;22" foregroundColor="PlatoonBKfg1" halign="left" position="42,157" size="384,351" source="Event" render="PlatoonHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,startdelay=4000,wrap,always=0" transparent="1" zPosition="1">
       <convert type="PlatoonHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" font="Regular2;20" foregroundColor="PlatoonBKfg2" position="42,516" size="384,26" halign="left" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">coming</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="gleich:" font="Regular2;20" foregroundColor="PlatoonBKfg2" position="42,516" size="384,26" halign="left" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" font="Regular;20" foregroundColor="PlatoonBKfg2" position="42,542" render="CoolNextEvent" size="384,78" source="Service" transparent="1" />
     <widget CoolBar="0" CoolBarColor="PlatoonBKfg1" CoolCurrentCol="PlatoonSelfg" CoolDurationColor="PlatoonBKfg1" CoolDurationPos="714" CoolDurationSize="70" CoolEventColor="PlatoonBKfg1" CoolEventFont="Regular;22" CoolEventHPos="2" CoolEventPos="317" CoolEventSize="340" CoolFont="Regular;24" CoolMarkerHPos="1" CoolMarkerPicHPos="2" CoolMarkerPicPos="2" CoolMarkerPos="140" CoolPico="28" CoolPicoHPos="1" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="PlatoonBKfg1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="2" CoolServiceSize="300" CoolTime="1" CoolTimeHPos="2" CoolTimePos="666" CoolTimeSize="120" CoolTunerCol="PlatoonBKfg1" backgroundColor="PlatoonBKbg" foregroundColor="PlatoonBKfg1" itemHeight="32" selectionPixmap="PlatoonHD/graphics/sel_36.png" name="list" position="452,78" size="786,544" transparent="1" zPosition="25" />
     <panel name="full_background"/>
@@ -6919,9 +6813,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
 	<!--*MovieSelection*-->
     <widget name="waitingtext" position="0,0" size="0,0" />
-    <widget backgroundColor="PlatoonGYbg" source="session.CurrentService" render="Label" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1">
-      <convert type="PlatoonHDTextTranslator">movielist</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonGYbg" text="Filmliste" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="list" position="491,80" size="747,540" fontName="Regular" fontSizesOriginal="22,20,20" fontSizesCompact="22,20" fontSizesMinimal="22,20" itemHeights="90,54,30" selectionPixmap="PlatoonHD/graphics/sel_90.png" pbarShift="7" pbarHeight="16" pbarLargeWidth="48" partIconeShiftMinimal="5" partIconeShiftCompact="5" partIconeShiftOriginal="5" spaceIconeText="4" iconsWidth="25" trashShift="3" dirShift="3" spaceRight="2" columnsOriginal="200,220" columnsCompactDescription="140,160,180" compactColumn="220" treeDescription="180" foregroundColor="PlatoonBKfg1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget source="Service" render="Label" position="496,26" size="450,27" font="Regular;22" foregroundColor="PlatoonGYfg1" backgroundColor="PlatoonGYbg" transparent="1" noWrap="1" halign="left">
 	  <convert type="PlatoonHDDiskSpace">path</convert>
@@ -6950,6 +6842,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="SourceRedGreenYellowBlue"/>
     <panel name="MenuOKExit"/>
   </screen>
+
   <screen name="RadioEchoPlus" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*RadioEchoPlus*-->
 	<eLabel backgroundColor="PlatoonBKbg" text="Jetzt läuft:" font="Regular2;30" foregroundColor="PlatoonBKfg2" position="42,70" size="609,38" halign="center" valign="center" transparent="1" />
@@ -6971,6 +6864,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Exit"/>
   </screen>
+
   <screen name="RadioEchoPlusAbout" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*RadioEchoPlusAbout*-->
 	<eLabel backgroundColor="PlatoonBKbg" text="Unser Studio:" font="Regular2;27" position="42,80" size="609,34" foregroundColor="PlatoonBKfg2" transparent="1" />
@@ -6999,6 +6893,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget font="Regular;20" halign="left" valign="center" source="key_red" position="40,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
     <panel name="Exit"/>
   </screen>
+
   <screen name="RadioEchoPlusConfig" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*RadioEchoPlusConfig*-->
 	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
@@ -7008,25 +6903,6 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="SourceRedGreen"/>
     <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
-  </screen>
-  <screen name="PlatoonHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-	<!--*PlatoonHD*-->
-	<widget backgroundColor="PlatoonGYbg" source="version" render="Label" font="Regular;24" foregroundColor="PlatoonGYfg1" position="414,24" size="800,30" halign="right" transparent="1" />
-	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="/usr/share/enigma2/PlatoonHD/graphics/sel_30.png" position="42,80" size="736,450" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-	<widget backgroundColor="PlatoonBKbg" name="helperimage" position="846,70" size="368,207" zPosition="1" />
-	<widget backgroundColor="PlatoonBKbg" source="Canvas" render="Canvas" position="846,70" size="368,207" zPosition="-1" />
-	<eLabel backgroundColor="PlatoonGYfg2" position="846,68" size="368,2" zPosition="2" />
-	<eLabel backgroundColor="PlatoonGYfg2" position="846,277" size="368,2" zPosition="2" />
-	<eLabel backgroundColor="PlatoonGYfg2" position="844,68" size="2,211" zPosition="2" />
-	<eLabel backgroundColor="PlatoonGYfg2" position="1212,68" size="2,211" zPosition="2" />
-	<widget backgroundColor="PlatoonBKbg" source="description" render="Label" font="Regular2;22" foregroundColor="PlatoonBKfg2" position="42,539" size="736,81" halign="center" valign="center" transparent="1" />
-	<ePixmap backgroundColor="PlatoonBKbg" pixmap="PlatoonHD/logo.png" position="902,330" size="256,256" alphatest="blend" />
-    <panel name="Title-big"/>
-    <panel name="SourceRedGreenYellow"/>
-    <panel name="Colorbuttons"/>
-    <panel name="OKExit"/>
-	<ePixmap pixmap="/usr/share/enigma2/PlatoonHD/graphics/menu_background.png" position="0,0" size="1280,720" zPosition="-9" alphatest="blend" />
-	<eLabel backgroundColor="PlatoonBKbg" position="32,70" size="756,560" zPosition="-9" />
   </screen>
 
   <screen name="HDFRadio" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -7090,9 +6966,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     </widget>
 	<eLabel backgroundColor="PlatoonBKbg" text="HDF-Streams" font="Regular2;27" foregroundColor="PlatoonBKfg2" position="42,72" size="581,36" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" name="stations" font="Regular;22" foregroundColor="PlatoonBKfg1" position="42,114" size="581,390" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
-    <widget backgroundColor="PlatoonBKbg" source="session.CurrentService" render="Label" foregroundColor="PlatoonBKfg2" font="Regular2;27" position="665,72" size="573,36" transparent="1">
-      <convert type="PlatoonHDTextTranslator">favorites</convert>
-    </widget>
+    <eLabel backgroundColor="PlatoonBKbg" text="Favoriten" foregroundColor="PlatoonBKfg2" font="Regular2;27" position="665,72" size="573,36" transparent="1" />
 	<widget backgroundColor="PlatoonBKbg" name="favorites" font="Regular;22" foregroundColor="PlatoonBKfg1" position="665,114" size="573,510" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="PlatoonBKbg" source="instruction" render="Label" font="Regular2;21" foregroundColor="PlatoonBKfg2" position="42,516" size="581,104" halign="center" valign="center" transparent="1" />
     <panel name="Title-big"/>

@@ -14,6 +14,3 @@
 
 ## PluginBrowser
 ![Erweiterungen](https://user-images.githubusercontent.com/10674715/111898558-0fe5ad00-8a27-11eb-957b-8d7294c44e7c.jpg)
-
-## PlatoonHD-Plugin
-![Plugin](https://user-images.githubusercontent.com/10674715/111898560-12e09d80-8a27-11eb-8d47-ce4e958ab0ee.jpg)
