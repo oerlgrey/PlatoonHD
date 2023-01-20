@@ -1,0 +1,418 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# örlgrey <ochzoetna@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PlatoonHD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-17 20:24+0200\n"
+"PO-Revision-Date: 2021-09-06 22:37+0200\n"
+"Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
+"Language-Team: örlgrey\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: PlatoonHD.py
+msgid "MyPlatoonHD-Settings"
+msgstr "MyPlatoonHD-Einstellungen"
+
+#: PlatoonHD.py
+msgid "background"
+msgstr "Hintergrund"
+
+#: PlatoonHD.py
+msgid "    transparency"
+msgstr "    Transparenz"
+
+#: PlatoonHD.py
+msgid "    primary font color"
+msgstr "    primäre Schriftfarbe"
+
+#: PlatoonHD.py
+msgid "    secondary font color"
+msgstr "    sekundäre Schriftfarbe"
+
+#: PlatoonHD.py
+msgid "    colorbutton font color"
+msgstr "    Farbtasten-Schriftfarbe"
+
+#: PlatoonHD.py
+msgid "window"
+msgstr "Fenster"
+
+#: PlatoonHD.py
+msgid "    selection color"
+msgstr "    Auswahlbalken-Farbe"
+
+#: PlatoonHD.py
+msgid "    selection font color"
+msgstr "    Auswahlbalken-Schriftfarbe"
+
+#: PlatoonHD.py
+msgid "    progress bar color"
+msgstr "    Fortschrittsbalken-Farbe"
+
+#: PlatoonHD.py
+msgid "Choose the background color."
+msgstr "Wählen Sie die Hintergrundfarbe."
+
+#: PlatoonHD.py
+msgid "Choose the degree of background transparency."
+msgstr "Wählen Sie den Grad der Hintergrundtransparenz."
+
+#: PlatoonHD.py
+msgid "Choose the color of the primary font."
+msgstr "Wählen Sie die primäre Schriftfarbe."
+
+#: PlatoonHD.py
+msgid "Choose the color of the secondary font."
+msgstr "Wählen Sie die sekundäre Schriftfarbe."
+
+#: PlatoonHD.py
+msgid "Choose the font color of the color button labels."
+msgstr "Wählen Sie die Schriftfarbe der Farbtastenbeschriftungen."
+
+#: PlatoonHD.py
+msgid "Choose the background color of selection bars."
+msgstr "Wählen Sie die Hintergrundfarbe der Auswahlbalken."
+
+#: PlatoonHD.py
+msgid "Choose the color of the font in selection bars."
+msgstr "Wählen Sie die Farbe der Schrift in Auswahlbalken."
+
+#: PlatoonHD.py
+msgid "Choose the color of progress bars."
+msgstr "Wählen Sie die Farbe der Fortschrittsbalken."
+
+#: PlatoonHD.py
+msgid "Amber"
+msgstr "Bernstein"
+
+#: PlatoonHD.py
+msgid "Amber dark"
+msgstr "Dunkel Bernstein"
+
+#: PlatoonHD.py
+msgid "Black"
+msgstr "Schwarz"
+
+#: PlatoonHD.py
+msgid "Blue"
+msgstr "Blau"
+
+#: PlatoonHD.py
+msgid "Blue dark"
+msgstr "Dunkel Blau"
+
+#: PlatoonHD.py
+msgid "Brown"
+msgstr "Braun"
+
+#: PlatoonHD.py
+msgid "Brown dark"
+msgstr "Dunkel Braun"
+
+#: PlatoonHD.py
+msgid "Cobalt"
+msgstr "Cobalt"
+
+#: PlatoonHD.py
+msgid "Cobalt dark"
+msgstr "Dunkel Cobalt"
+
+#: PlatoonHD.py
+msgid "Cyan"
+msgstr "Cyan"
+
+#: PlatoonHD.py
+msgid "Cyan dark"
+msgstr "Dunkel Cyan"
+
+#: PlatoonHD.py
+msgid "Grey"
+msgstr "Grau"
+
+#: PlatoonHD.py
+msgid "Grey dark"
+msgstr "Dunkel Grau"
+
+#: PlatoonHD.py
+msgid "Green"
+msgstr "Grün"
+
+#: PlatoonHD.py
+msgid "Green dark"
+msgstr "Dunkel Grün"
+
+#: PlatoonHD.py
+msgid "Olive"
+msgstr "Olive"
+
+#: PlatoonHD.py
+msgid "Olive dark"
+msgstr "Dunkel Olive"
+
+#: PlatoonHD.py
+msgid "Orange"
+msgstr "Orange"
+
+msgid "Orange dark"
+msgstr "Dunkel Orange"
+
+#: PlatoonHD.py
+msgid "Petrol"
+msgstr "Petrol"
+
+#: PlatoonHD.py
+msgid "Petrol dark"
+msgstr "Dunkel Petrol"
+
+#: PlatoonHD.py
+msgid "Pink"
+msgstr "Pink"
+
+#: PlatoonHD.py
+msgid "Pink dark"
+msgstr "Dunkel Pink"
+
+#: PlatoonHD.py
+msgid "Red"
+msgstr "Rot"
+
+#: PlatoonHD.py
+msgid "Red dark"
+msgstr "Dunkel Rot"
+
+#: PlatoonHD.py
+msgid "Steel"
+msgstr "Stahl"
+
+#: PlatoonHD.py
+msgid "Steel dark"
+msgstr "Dunkel Stahl"
+
+#: PlatoonHD.py
+msgid "Violet"
+msgstr "Violet"
+
+#: PlatoonHD.py
+msgid "Violet dark"
+msgstr "Dunkel Violet"
+
+#: PlatoonHD.py
+msgid "White"
+msgstr "Weiß"
+
+#: PlatoonHD.py
+msgid "Emerald"
+msgstr "Smaragdgrün"
+
+#: PlatoonHD.py
+msgid "low"
+msgstr "niedrig"
+
+#: PlatoonHD.py
+msgid "medium"
+msgstr "mittel"
+
+#: PlatoonHD.py
+msgid "high"
+msgstr "hoch"
+
+#: PlatoonHD.py
+msgid "no transparency"
+msgstr "ohne Transparenz"
+
+#: PlatoonHD.py
+msgid "low transparency"
+msgstr "niedrige Transparenz"
+
+#: PlatoonHD.py
+msgid "medium transparency"
+msgstr "mittlere Transparenz"
+
+#: PlatoonHD.py
+msgid "high transparency"
+msgstr "hohe Transparenz"
+
+#: PlatoonHD.py
+msgid "weather"
+msgstr "Wetter"
+
+#: PlatoonHD.py
+msgid "Weather off"
+msgstr "Wetter aus"
+
+#: PlatoonHD.py
+msgid "Infobar"
+msgstr "Infoleiste"
+
+#: PlatoonHD.py
+msgid "Menu"
+msgstr "Menü"
+
+#: PlatoonHD.py
+msgid "Infobar & Menu"
+msgstr "Infoleiste & Menü"
+
+#: PlatoonHD.py
+msgid "Choose from different options to display the weather informations, or deactivate the weather infos."
+msgstr "Wählen Sie aus verschiedenen Optionen um die Wetter-Informationen anzuzeigen, oder deaktivieren Sie die Wetter-Anzeige."
+
+#: PlatoonHD.py
+msgid ""
+"Choose from different options to enter your settings.\n"
+"Then press the yellow button to search for the weather code."
+msgstr ""
+"Wählen Sie aus verschiedenen Optionen um Ihre Einstellungen vorzunehmen.\n"
+"Drücken Sie dann die gelbe Taste um nach dem Wetter-Code zu suchen."
+
+#: PlatoonHD.py
+msgid ""
+"Enter your location. Press OK to use the virtual keyboard.\n"
+"Then press the yellow button to search for the weather code."
+msgstr ""
+"Geben Sie Ihren Standort ein. Drücken Sie OK um die virtuelle Tastatur zu verwenden.\n"
+"Drücken Sie dann die gelbe Taste um nach dem Wetter-Code zu suchen."
+
+#: PlatoonHD.py
+msgid "Enter your location:"
+msgstr "Geben Sie Ihren Standort ein:"
+
+#: PlatoonHD.py
+msgid "Do you really want to reboot now?"
+msgstr "Wollen Sie jetzt neu starten?"
+
+#: PlatoonHD.py
+msgid "Do you really want to exit without saving?"
+msgstr "Wollen Sie wirklich beenden, ohne zu speichern?"
+
+#: PlatoonHD.py
+msgid "Restart GUI"
+msgstr "GUI neu starten"
+
+#: PlatoonHD.py
+msgid ""
+"GUI needs a restart to apply the settings.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Zum Aktivieren der Einstellungen muss die Oberfläche neu gestartet werden.\n"
+"Wollen Sie jetzt neu starten?"
+
+#: PlatoonHD.py
+msgid ""
+"Your box needs an internet connection to display the weather information.\n"
+"Please solve the problem."
+msgstr ""
+"Ihre Box benötigt eine Internetverbindung, um die Wetter-Informationen anzuzeigen.\n"
+"Bitte beheben Sie das Problem."
+
+#: PlatoonHD.py
+msgid "Enter location manually"
+msgstr "Standort manuell eingeben"
+
+#: PlatoonHD.py
+msgid "No valid location found."
+msgstr "Keinen gültigen Standort gefunden."
+
+#: PlatoonHD.py
+msgid "No valid Weather-Code found."
+msgstr "Keinen gültigen Wetter-Code gefunden."
+
+#: PlatoonHD.py
+msgid "Location found:\n"
+msgstr "Standort gefunden:\n"
+
+#: PlatoonHD.py
+msgid "Weather-Code found:\n"
+msgstr "Wetter-Code gefunden:\n"
+
+#: PlatoonHD.py
+msgid "Choose your location:"
+msgstr "Wählen Sie Ihren Standort:"
+
+#: PlatoonHD.py
+msgid "    Language"
+msgstr "    Sprache"
+
+#: PlatoonHD.py
+msgid "Specify the language for the weather output."
+msgstr "Wählen Sie die Sprache für die Wetter-Anzeige."
+
+#: PlatoonHD.py
+msgid "Search Code"
+msgstr "Suche Code"
+
+#: PlatoonHD.py
+msgid "    Search option"
+msgstr "    Suchoption"
+
+#: PlatoonHD.py
+msgid "    Location"
+msgstr "    Standort"
+
+#: PlatoonHD.py
+msgid "Check location"
+msgstr "Überprüfe Standort"
+
+#: PlatoonHDTextTranslator.py
+msgid "it follows:"
+msgstr "es folgt:"
+
+#: PlatoonHDTextTranslator.py
+msgid "coming:"
+msgstr "gleich:"
+
+#: PlatoonHDTextTranslator.py
+msgid "runs until"
+msgstr "läuft bis "
+
+#: PlatoonHDTextTranslator.py
+msgid "timeshift active"
+msgstr "timeshift aktiv"
+
+#: PlatoonHDTextTranslator.py
+msgid "until live:"
+msgstr "bis live:"
+
+#: PlatoonHDTextTranslator.py
+msgid "Birthday"
+msgstr "Geburtstag"
+
+#: PlatoonHDTextTranslator.py
+msgid "Age"
+msgstr "Alter"
+
+#: PlatoonHDTextTranslator.py
+msgid "Birthday Reminder Settings"
+msgstr "Birthday Reminder Einstellungen"
+
+#: PlatoonHDTextTranslator.py
+msgid "Select a path for the birthday file"
+msgstr "Wähle den Pfad für die Geburtstagsdatei"
+
+#: PlatoonHDTextTranslator.py
+msgid "Channellist"
+msgstr "Kanalliste"
+
+#: PlatoonHDTextTranslator.py
+msgid "Movielist"
+msgstr "Filmliste"
+
+#: PlatoonHDTextTranslator.py
+msgid "Second Infobar"
+msgstr "Zweite Infoleiste"
+
+#: PlatoonHDTextTranslator.py
+msgid "Screensaver"
+msgstr "Bildschirmschoner"
+
+#: PlatoonHDTextTranslator.py
+msgid "Favorites"
+msgstr "Favoriten"
