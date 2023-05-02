@@ -72,11 +72,14 @@ if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyo ]; then
     rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyo
 fi
 if [ -f /usr/share/enigma2/PlatoonHD/skin.xml ]; then
-    cp /usr/share/enigma2/PlatoonHD/skin.xml /tmp/platoonhd-skin.xml
+    cp -f /usr/share/enigma2/PlatoonHD/skin.xml /tmp/platoonhd-skin.xml
 fi
 if [ -d /tmp/platoonhd-graphics ]; then
     cp -f /usr/share/enigma2/PlatoonHD/graphics/* /tmp/platoonhd-graphics/
 else
     mkdir /tmp/platoonhd-graphics
     cp /usr/share/enigma2/PlatoonHD/graphics/* /tmp/platoonhd-graphics/
+fi
+if [ -d /usr/share/enigma2/PlatoonHD ]; then
+    rm -r /usr/share/enigma2/PlatoonHD
 fi

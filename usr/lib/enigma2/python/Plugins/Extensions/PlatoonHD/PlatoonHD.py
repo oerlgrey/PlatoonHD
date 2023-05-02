@@ -36,7 +36,6 @@ from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE
 from shutil import move, copyfile
 
 python3 = False
-
 try:
 	import six
 	if six.PY2:
@@ -169,7 +168,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self["helperimage"] = Pixmap()
 		self["Canvas"] = CanvasSource()
 		self["description"] = StaticText()
-		self["version"] = StaticText("Version 2.1.5")
+		self["version"] = StaticText("Version 2.1.7")
 
 		list = []
 		ConfigListScreen.__init__(self, list)

@@ -2010,6 +2010,18 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector">
 	<!--*SkinSelector*-->
+	<!-- new widgets -->
+	<widget backgroundColor="PlatoonBKbg" source="skins" render="Listbox" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="42,80" size="348,420" transparent="1">
+	  <convert type="TemplatedMultiContent">
+	      {"template": [ MultiContentEntryText(pos = (8, 1), size = (332, 27), flags = RT_HALIGN_LEFT, text = 0) ],
+	      "fonts": [gFont("Regular", 22)],
+	      "itemHeight": 30
+	      }
+	  </convert>
+	</widget>
+    <widget alphatest="blend" name="preview" position="428,70" size="280,210" />
+    <widget backgroundColor="PlatoonBKbg" font="Regular2;22" halign="center" position="42,545" render="Label" size="736,54" source="description" transparent="1" foregroundColor="PlatoonBKfg2" />
+	<!-- old widgets -->
     <widget backgroundColor="PlatoonBKbg" name="SkinList" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="42,80" size="348,420" transparent="1" />
     <widget alphatest="blend" name="Preview" position="428,70" size="280,210" />
     <widget backgroundColor="PlatoonBKbg" font="Regular2;22" halign="center" position="42,545" render="Label" size="736,54" source="introduction" transparent="1" foregroundColor="PlatoonBKfg2" />
@@ -5762,6 +5774,16 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="MenuOKExit"/>
   </screen>
 
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubePlayerConfig" position="0,0" size="1280,720" title="YouTubePlayer Config">
+	<!--*YouTubePlayerConfig*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="PlatoonBKbg" name="list" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+	<panel name="menu_logo"/>
+    <panel name="OKExit"/>
+  </screen>
+
   <screen name="YoutubeTVSettings" position="0,0" size="1280,720" title="YouTube TV Settings" backgroundColor="transparent" flags="wfNoBorder">
 	<!--*YoutubeTVSettings*-->
     <panel name="Title-big"/>
@@ -5783,6 +5805,48 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget font="Regular;20" halign="left" valign="center" source="key_yellow" position="540,655" size="220,26" render="Label" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" />
 	<panel name="menu_logo"/>
     <panel name="Exit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubeMain" position="0,0" size="1280,720" title="YouTube">
+	<!--*YouTubeMain*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="PlatoonBKbg" source="list" render="Listbox" foregroundColor="PlatoonBKfg1" selectionPixmap="PlatoonHD/graphics/sel_90.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(4, 9), size=(100, 72), png=2), # Thumbnail
+					MultiContentEntryText(pos=(120, 0), size=(600, 54), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
+					MultiContentEntryText(pos=(120, 54), size=(290, 34), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=4), # Views
+					MultiContentEntryText(pos=(420, 54), size=(300, 34), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=5), # Duration
+					],
+				"fonts": [gFont("Regular",22), gFont("Regular",18)],
+				"itemHeight": 90}
+	  </convert>
+	</widget>
+	<widget name="thumbnail" position="4,9" backgroundColor="PlatoonBKbg" itemHeight="90" transparent="1" alphatest="on" size="100,72" />
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreen"/>
+	<panel name="menu_logo"/>
+    <panel name="MenuOKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubeSearch" position="0,0" size="1280,720" title="YouTubeSearch">
+	<!--*YouTubeSearch*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="PlatoonBKbg" source="list" render="Listbox" foregroundColor="PlatoonBKfg1" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,360" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos=(10, 1), size=(710, 27), font=0, flags=RT_HALIGN_LEFT, text=0)
+				],
+				"fonts": [gFont("Regular",22)],
+				"itemHeight": 30}
+	  </convert>
+	</widget>
+	<widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,455" size="736,30" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="HelpWindow" position="42,490" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellow"/>
+	<panel name="menu_logo"/>
+    <panel name="MenuOKExit"/>
   </screen>
 
   <screen name="EPGImportConfig" position="0,0" size="1280,720" title="EPG Import Configuration" backgroundColor="transparent" flags="wfNoBorder">
@@ -6271,21 +6335,21 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 		</convert>
 	</widget>
     <widget name="thumb" position="852,80" zPosition="2" size="280,280" alphatest="blend" />
- 	<widget name="Bez_sort" position="852,434" size="100,27" font="Regular;20" foregroundColor="PlatoonBKfg2" backgroundColor="PlatoonBKbg" transparent="1" />
+ 	<widget name="Bez_sort" position="852,434" size="101,27" font="Regular2;20" foregroundColor="PlatoonBKfg2" backgroundColor="PlatoonBKbg" transparent="1" noWrap="1" />
     <widget name="key_sort" position="972,434" size="267,27" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" noWrap="1"/>
-    <widget name="button_ok" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/pictures/key_ok.png" position="852,469" size="35,25" zPosition="1" alphatest="blend" />
-    <widget name="key_ok" position="905,467" zPosition="1" size="334,30" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" noWrap="1"/>
-    <widget name="button_0" pixmap="/usr/share/enigma2/skin_default/buttons/key_0.png" position="852,500" size="35,25" zPosition="1" alphatest="blend" />
-    <widget name="key_0" position="905,500" zPosition="1" size="334,30" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" noWrap="1"/>
-    <widget name="button_epg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/pictures/key_epg.png" position="852,536" size="35,25" zPosition="1" alphatest="blend" />
+    <widget name="button_ok" pixmap="PlatoonHD/buttons/key_ok.png" position="852,467" size="27,30" zPosition="1" alphatest="blend" />
+    <widget name="key_ok" position="902,468" zPosition="1" size="334,30" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" noWrap="1"/>
+    <widget name="button_0" pixmap="PlatoonHD/buttons/key_0.png" position="852,500" size="27,30" zPosition="1" alphatest="blend" />
+    <widget name="key_0" position="902,501" zPosition="1" size="334,30" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" noWrap="1"/>
+    <widget name="dats" position="852,534" size="380,27" font="Regular;20" foregroundColor="PlatoonBKfg1" backgroundColor="PlatoonBKbg" transparent="1" noWrap="1"/>
     <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_red1.png" position="35,682" size="200,5" />
-    <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_green1.png" position="309,682" size="200,5" />
-    <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_yellow1.png" position="576,682" size="200,5" />
-    <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_blue1.png" position="843,682" size="200,5" />
+    <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_green1.png" position="302,682" size="200,5" />
+    <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_yellow1.png" position="569,682" size="200,5" />
+    <ePixmap alphatest="blend" pixmap="PlatoonHD/buttons/key_blue1.png" position="836,682" size="200,5" />
     <widget font="Regular;20" halign="left" valign="top" name="key_red" position="40,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
     <widget font="Regular;20" halign="left" valign="top" name="key_green" position="307,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
     <widget font="Regular;20" halign="left" valign="top" name="key_yellow" position="574,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
-    <widget font="Regular;20" halign="left" valign="top" name="key_blue" position="841,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="2" noWrap="1"/>
+    <widget font="Regular;20" halign="left" valign="top" name="key_blue" position="841,655" size="254,26" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" zPosition="1" noWrap="1"/>
     <ePixmap pixmap="PlatoonHD/icons-light/key_menu.png" position="1145,660" size="43,22" alphatest="blend" />
     <ePixmap pixmap="PlatoonHD/icons-light/key_exit.png" position="1195,660" size="43,22" alphatest="blend" />
   </screen>
@@ -6309,6 +6373,30 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
     <panel name="NameRedGreenYellowBlue"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="PictureCenterFS7_Filemenu" position="0,0" size="1280,720" title="PictureCenterFS">
+	<!--*PictureCenterFS7_Filemenu*-->
+	<eLabel backgroundColor="PlatoonGYbg" text="PictureCenterFS" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
+	<widget backgroundColor="PlatoonBKbg" source="m_liste" render="Listbox" position="42,80" size="736,300" foregroundColor="PlatoonBKfg1" selectionPixmap="PlatoonHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+	  <convert type="TemplatedMultiContent">
+				{"templates": 
+					{"default": (30, [
+					MultiContentEntryText(pos = (10, 1), size = (710, 28), font=0, flags = RT_HALIGN_LEFT, text = 0)
+					],True), 
+					"with_numpic": (30,[
+					MultiContentEntryPixmapAlphaTest(pos = (3, 3), size = (40, 30), png = 2), # index 5: stream-logo
+					MultiContentEntryText(pos = (50, 1), size = (670, 28), font=0, flags = RT_HALIGN_LEFT, text = 0)
+					],True)
+					}, 
+				"fonts": [gFont("Regular", 22)],"itemHeight": 30
+				}
+	  </convert>
+	</widget>
+    <widget name="thumb" position="279,400" zPosition="2" size="220,220" alphatest="blend" />
+	<panel name="menu_logo"/>
+    <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
   </screen>
 
@@ -7266,10 +7354,11 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*PiconsUpdaterView*-->
 	<eLabel backgroundColor="PlatoonGYbg" text="PiconsUpdater" foregroundColor="PlatoonGYfg2" font="Regular2;30" position="42,20" size="1000,38" noWrap="1" valign="center" transparent="1" />
     <widget backgroundColor="PlatoonBKbg" name="config" font="Regular;22" foregroundColor="PlatoonBKfg1" itemHeight="30" selectionPixmap="PlatoonHD/graphics/sel_30.png" position="42,80" size="736,180" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-	<widget backgroundColor="transparent" name="backgroundImage" position="160,260" size="500,300" zPosition="1" alphatest="blend" transparent="1"/>
-	<widget backgroundColor="transparent" name="previewImage" position="185,275" size="450,270" zPosition="1" alphatest="blend" transparent="1"/>
-	<widget backgroundColor="transparent" name="foregroundImage" position="160,260" size="500,300" zPosition="1" alphatest="blend" transparent="1"/>
-	<eLabel backgroundColor="PlatoonBKbg" text="coded by svox, idea by arn354" position="42,575" size="736,27" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" zPosition="1" transparent="1"/>
+	<widget backgroundColor="transparent" name="backgroundImage" position="235,270" size="350,210" zPosition="1" alphatest="blend" transparent="1"/>
+	<widget backgroundColor="transparent" name="previewImage" position="252,280" size="315,189" zPosition="2" alphatest="blend" transparent="1"/>
+	<widget backgroundColor="transparent" name="foregroundImage" position="235,270" size="350,210" zPosition="3" alphatest="blend" transparent="1"/>
+	<eLabel backgroundColor="PlatoonBKbg" text="coded by svox, idea by arn354" position="42,540" size="736,27" font="Regular2;22" foregroundColor="PlatoonBKfg2" halign="center" valign="center" zPosition="1" transparent="1"/>
+    <widget name="HelpWindow" position="42,490" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
 	<panel name="menu_logo"/>
     <panel name="Colorbuttons"/>
     <eLabel text="Cancel" position="40,655" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="PlatoonGYbg2" foregroundColor="PlatoonButtonfg" transparent="1" />
@@ -7278,15 +7367,10 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="OKExit"/>
   </screen>
 
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="JobProgressView" position="0,0" size="1280,720" title="Job Progress">
-	<!--*JobProgressView*-->
-	<widget backgroundColor="PlatoonBKbg" source="titleText" render="Label" position="42,80" size="736,27" font="Regular;22" foregroundColor="PlatoonBKfg1" zPosition="1" transparent="1" />
-    <widget name="downloadProgress" borderColor="PlatoonBorder" borderWidth="3" position="42,120" size="736,15" transparent="1" foregroundColor="PlatoonProgress" />
-	<widget backgroundColor="PlatoonBKbg" source="downloadProgressText" render="Label" position="42,148" size="736,27" font="Regular;22" foregroundColor="PlatoonBKfg1" zPosition="1" transparent="1" />
-	<panel name="menu_logo"/>
-    <panel name="Title-big"/>
-    <panel name="Colorbuttons"/>
-    <panel name="OKExit"/>
+  <screen name="JobProgressView" position="center,318" size="440,122" title="Job Progress" backgroundColor="PlatoonBKbg">
+	<widget backgroundColor="PlatoonBKbg" source="titleText" render="Label" position="10,10" size="420,27" font="Regular;22" foregroundColor="PlatoonBKfg1" transparent="1" />
+	<widget name="downloadProgress" position="10,53" size="420,15" borderWidth="1" foregroundColor="PlatoonProgress" borderColor="PlatoonBKfg1" transparent="1" />
+	<widget backgroundColor="PlatoonBKbg" source="downloadProgressText" render="Label" position="10,78" size="420,27" font="Regular;22" foregroundColor="PlatoonBKfg1" transparent="1" />
   </screen>
 
   <screen name="Sett" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
@@ -7371,6 +7455,25 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<eLabel backgroundColor="PlatoonBorder" position="0,0" size="1,65" />
 	<eLabel backgroundColor="PlatoonBorder" position="0,64" size="270,1" />
 	<eLabel backgroundColor="PlatoonBorder" position="269,0" size="1,65" />
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapPicon" position="264,216" size="714,243" title="QuickZap">
+	<widget alphatest="blend" render="Picon" position="372,43" size="225,138" source="Service" zPosition="1">
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+	<widget backgroundColor="PlatoonBKbg" font="Regular; 80" foregroundColor="PlatoonBKfg1" halign="center" name="number" position="67,72" size="200,100" transparent="0" />
+	<widget backgroundColor="PlatoonBKbg" font="Regular; 20" foregroundColor="PlatoonBKfg1" halign="center" name="servicename" noWrap="1" position="295,179" size="387,26" transparent="0" />
+	<eLabel backgroundColor="PlatoonBKbg" position="271,32" size="427,181" zPosition="-1" />
+	<eLabel backgroundColor="PlatoonBorder" position="694,35" size="1,175" />
+	<eLabel backgroundColor="PlatoonBorder" position="274,35" size="420,1" />
+	<eLabel backgroundColor="PlatoonBKbg" position="46,46" size="225,154" zPosition="-1" />
+	<eLabel backgroundColor="PlatoonBorder" position="49,49" size="1,147" />
+	<eLabel backgroundColor="PlatoonBorder" position="49,49" size="235,1" />
+	<eLabel backgroundColor="PlatoonBorder" position="284,49" size="1,147" />
+	<eLabel backgroundColor="PlatoonBorder" position="49,195" size="235,1" />
+	<eLabel backgroundColor="PlatoonBorder" position="274,209" size="420,1" />
+	<eLabel backgroundColor="PlatoonBorder" position="274,196" size="1,14" />
+	<eLabel backgroundColor="PlatoonBorder" position="274,35" size="1,14" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection">
