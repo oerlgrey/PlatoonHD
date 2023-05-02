@@ -2,7 +2,7 @@
 #
 #  Plugin Code
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #
 #  This code is licensed under the Creative Commons 
@@ -25,7 +25,6 @@ from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from . import PlatoonHD
 
 python3 = False
-
 try:
 	import six
 	if six.PY2:

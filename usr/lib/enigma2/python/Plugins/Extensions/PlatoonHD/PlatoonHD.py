@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #
-#  PlatoonHD Plugin for teamBlue-image
+#  PlatoonHD Plugin
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #  Thankfully inspired by MyMetrix by iMaxxx
 #
@@ -36,7 +36,6 @@ from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE
 from shutil import move, copyfile
 
 python3 = False
-
 try:
 	import six
 	if six.PY2:
