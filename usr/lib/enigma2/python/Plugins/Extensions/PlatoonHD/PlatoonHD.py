@@ -169,7 +169,7 @@ class PlatoonHD(ConfigListScreen, Screen):
 		self["helperimage"] = Pixmap()
 		self["Canvas"] = CanvasSource()
 		self["description"] = StaticText()
-		self["version"] = StaticText("Version 2.1.5")
+		self["version"] = StaticText("Version 2.1.7")
 
 		list = []
 		ConfigListScreen.__init__(self, list)

@@ -1,82 +1,85 @@
 #!/bin/sh
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDClockToText.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDClockToText.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDClockToText.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDClockToText.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDDiskSpace.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDDiskSpace.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDDiskSpace.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDDiskSpace.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDDolbyState.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDDolbyState.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDDolbyState.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDDolbyState.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDECMLine.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDECMLine.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDECMLine.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDECMLine.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventName.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventName.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventName.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventName.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventTime.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventTime.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventTime.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDEventTime.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDMenuIconPath.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDMenuIconPath.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDMenuIconPath.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDMenuIconPath.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDMovieReference.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDMovieReference.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDMovieReference.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDMovieReference.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDRemainingToText.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDRemainingToText.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDRemainingToText.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDRemainingToText.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceEndTime.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceEndTime.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceEndTime.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceEndTime.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceInfoEX.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceInfoEX.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceInfoEX.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceInfoEX.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyo
+if [ -f /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/PlatoonHDServiceName2.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDDolbyIcon.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDDolbyIcon.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDDolbyIcon.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDDolbyIcon.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg3.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg3.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg3.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDEmptyEpg3.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDPixmapScaler.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDPixmapScaler.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDPixmapScaler.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDPixmapScaler.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDRunningText.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDRunningText.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDRunningText.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDRunningText.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDServiceIcon.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDServiceIcon.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDServiceIcon.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDServiceIcon.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDSingleEpgList.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyo
+if [ -f /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/PlatoonHDVolumeText.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/__init__.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/__init__.pyo
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/__init__.pyc ]; then
+    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/__init__.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/PlatoonHD.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/PlatoonHD.pyo
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/PlatoonHD.pyc ]; then
+    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/PlatoonHD.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/ping.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/ping.pyo
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/ping.pyc ]; then
+    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/ping.pyc
 fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyo ]; then
-    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyo
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyc ]; then
+    rm /usr/lib/enigma2/python/Plugins/Extensions/PlatoonHD/plugin.pyc
 fi
 if [ -f /usr/share/enigma2/PlatoonHD/skin.xml ]; then
-    cp /usr/share/enigma2/PlatoonHD/skin.xml /tmp/platoonhd-skin.xml
+    cp -f /usr/share/enigma2/PlatoonHD/skin.xml /tmp/platoonhd-skin.xml
 fi
 if [ -d /tmp/platoonhd-graphics ]; then
     cp -f /usr/share/enigma2/PlatoonHD/graphics/* /tmp/platoonhd-graphics/
 else
     mkdir /tmp/platoonhd-graphics
     cp /usr/share/enigma2/PlatoonHD/graphics/* /tmp/platoonhd-graphics/
+fi
+if [ -d /usr/share/enigma2/PlatoonHD ]; then
+    rm -r /usr/share/enigma2/PlatoonHD
 fi
