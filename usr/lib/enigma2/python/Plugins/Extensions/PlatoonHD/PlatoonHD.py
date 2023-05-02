@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #
-#  PlatoonHD Plugin for teamBlue-image
+#  PlatoonHD Plugin
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #  Thankfully inspired by MyMetrix by iMaxxx
 #
